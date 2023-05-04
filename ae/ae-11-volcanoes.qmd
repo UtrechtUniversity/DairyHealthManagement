@@ -11,17 +11,22 @@ Go to the [course GitHub organization](https://github.com/sta210-s22) and locate
 ```{r}
 #| label: load-pkgs
 #| warning: false
- 
+
+remotes::install_github("wilkelab/cowplot")
+install.packages("colorspace", repos = "http://R-Forge.R-project.org")
+remotes::install_github("clauswilke/colorblindr")
+
+# List of packages for session
 library(tidyverse)
 library(tidymodels)
 library(knitr)
 library(colorblindr)
+
 ```
 
 ## Data
 
-For this application exercise we will work with a dataset of on volcanoes.
-The data come from [The Smithsonian Institution](https://volcano.si.edu/) via [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-12/readme.md).
+For this application exercise we will work with a dataset of on volcanoes. The data come from [The Smithsonian Institution](https://volcano.si.edu/) via [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-05-12/readme.md).
 
 ```{r}
 volcano <- read_csv(here::here("ae", "data/volcano.csv"))

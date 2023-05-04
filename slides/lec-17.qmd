@@ -42,12 +42,15 @@ library(countdown)
 ```{r}
 #| warning: false
 
-# load packages
-library(tidyverse)
-library(tidymodels)
-library(knitr)      # for tables
-library(patchwork)  # for laying out plots
-library(rms)        # for vif
+# List of packages for session
+.packages = c("tidyverse", "tidymodels", "patchwork", "knitr", "rms")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 
 # set default theme and larger font size for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
@@ -315,8 +318,7 @@ p1 + p2
 
 ## Checking independence
 
-No clear pattern in the residuals vs. order of data collection plot and the model predicts similarly for seasons and day types.
-Independence condition appears to be satisfied, as far as we can evaluate it.
+No clear pattern in the residuals vs. order of data collection plot and the model predicts similarly for seasons and day types. Independence condition appears to be satisfied, as far as we can evaluate it.
 
 # Multicollinearity
 
@@ -396,8 +398,7 @@ vif(rt_full_fit$fit)
 
 . . .
 
-`hightemp` and `avgtemp` are correlated.
-We need to remove one of these variables and refit the model.
+`hightemp` and `avgtemp` are correlated. We need to remove one of these variables and refit the model.
 
 ## Model without `hightemp` {.smaller}
 
@@ -449,8 +450,7 @@ glance(m2) %>%
   select(adj.r.squared, AIC, BIC) %>% kable(digits = 2)
 ```
 
-Based on Adjusted $R^2$, AIC, and BIC, the model with **avgtemp** removed is a better fit.
-Therefore, we choose to remove **avgtemp** from the model and leave **hightemp** in the model to deal with the multicollinearity.
+Based on Adjusted $R^2$, AIC, and BIC, the model with **avgtemp** removed is a better fit. Therefore, we choose to remove **avgtemp** from the model and leave **hightemp** in the model to deal with the multicollinearity.
 
 ## Recap
 

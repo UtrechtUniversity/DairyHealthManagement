@@ -42,11 +42,15 @@ knitr::opts_chunk$set(
 ```{r}
 #| echo: true
 
-# load packages
-library(tidyverse)
-library(tidymodels)
-library(knitr)
-library(schrute)
+# List of packages for session
+.packages = c("tidyverse", "tidymodels", "schrute", "knitr")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 ```
 
 ## Data & goal {.smaller}
@@ -131,9 +135,7 @@ office_wflow1
 
 ## Resampling for model assessment
 
-**Resampling is only conducted on the training set**.
-The test set is not involved.
-For each iteration of resampling, the data are partitioned into two subsamples:
+**Resampling is only conducted on the training set**. The test set is not involved. For each iteration of resampling, the data are partitioned into two subsamples:
 
 -   The model is fit with the **analysis set**.
 -   The model is evaluated with the **assessment set**.
@@ -144,8 +146,7 @@ For each iteration of resampling, the data are partitioned into two subsamples:
 
 <br>
 
-Source: Kuhn and Silge.
-[Tidy modeling with R](https://www.tmwr.org/).
+Source: Kuhn and Silge. [Tidy modeling with R](https://www.tmwr.org/).
 
 ## Analysis and assessment sets
 

@@ -9,11 +9,16 @@ Go to the [course GitHub organization](https://github.com/sta210-s22) and locate
 ## Packages
 
 ```{r load-packages}
-#| message: false
-library(tidyverse)
-library(tidymodels)
-library(ggfortify)
-library(knitr)
+
+# List of packages for session
+.packages = c("tidyverse","tidymodels", "knitr", "ggfortify")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 ```
 
 ## Restaurant tips

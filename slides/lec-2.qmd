@@ -17,7 +17,16 @@ execute:
 
 ```{r setup}
 #| include: false
-library(countdown)
+
+# List of packages for session
+.packages = c("countdown")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 knitr::opts_chunk$set(
   fig.width = 6,
   fig.asp = 0.618,
@@ -49,10 +58,15 @@ knitr::opts_chunk$set(
 #| echo: true
 #| message: false
 
-# load packages
-library(tidyverse)       # for data wrangling
-library(tidymodels)      # for modeling
-library(fivethirtyeight) # for the fandango dataset
+# List of packages for session
+.packages = c("tidyverse", "tidymodels", "fivethirtyeight")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 
 # set default theme and larger font size for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
@@ -355,8 +369,7 @@ $$
 
 ## Interpreting the slope {.smaller}
 
-**Poll:** The slope of the model for predicting audience score from critics score is 32.3142.
-Which of the following is the best interpretation of this value?
+**Poll:** The slope of the model for predicting audience score from critics score is 32.3142. Which of the following is the best interpretation of this value?
 
 -   For every one point increase in the critics score, the audience score goes up by 0.5187 points, on average.
 -   For every one point increase in the critics score, we expect the audience score to be higher by 0.5187 points, on average.
@@ -387,8 +400,7 @@ $$\widehat{\text{audience}} = 32.3142 + 0.5187 \times \text{critics}$$
 
 ## Making a prediction
 
-Suppose that a movie has a critics score of 50.
-According to this model, what is the movie's predicted audience score?
+Suppose that a movie has a critics score of 50. According to this model, what is the movie's predicted audience score?
 
 $$
 \begin{aligned}
@@ -400,8 +412,7 @@ $$
 
 ## Extrapolation
 
-Suppose that a movie has a critics score of 0.
-According to this model, what is the movie's predicted audience score?
+Suppose that a movie has a critics score of 0. According to this model, what is the movie's predicted audience score?
 
 ```{r}
 p + coord_cartesian(xlim = c(0, 100))
