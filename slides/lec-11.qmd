@@ -52,12 +52,15 @@ knitr::opts_chunk$set(
 ```{r}
 #| echo: true
 
-# load packages
-library(tidyverse)
-library(tidymodels)
-library(patchwork)
-library(knitr)
-library(kableExtra)
+# List of packages for session
+.packages = c("countdown", "tidyverse", "tidymodels", "patchwork", "kableExtra", "janitor")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 
 # set default theme and larger font size for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
@@ -472,9 +475,7 @@ glance(tip_fit_2) %>%
 
 ## Alternate views {.smaller}
 
-> Sometimes a simple model will outperform a more complex model .
-> . . Nevertheless, I believe that deliberately limiting the complexity of the model is not fruitful when the problem is evidently complex.
-> Instead, if a simple model is found that outperforms some particular complex model, the appropriate response is to define a different complex model that captures whatever aspect of the problem led to the simple model performing well.
+> Sometimes a simple model will outperform a more complex model . . . Nevertheless, I believe that deliberately limiting the complexity of the model is not fruitful when the problem is evidently complex. Instead, if a simple model is found that outperforms some particular complex model, the appropriate response is to define a different complex model that captures whatever aspect of the problem led to the simple model performing well.
 >
 > <br>
 >

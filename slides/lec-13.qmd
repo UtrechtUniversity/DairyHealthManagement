@@ -49,11 +49,15 @@ knitr::opts_chunk$set(
 ```{r}
 #| echo: true
 
-# load packages
-library(tidyverse)
-library(tidymodels)
-library(gghighlight)
-library(knitr)
+# List of packages for session
+.packages = c("tidyverse", "tidymodels", "gghighlight", "knitr")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 
 # set default theme and larger font size for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
@@ -188,8 +192,7 @@ office_rec
 . . .
 
 ::: callout-note
-This is optional, we'll show the results for demonstrative purposes.
-It doesn't need to be part of your modeling pipeline, but I find it assuring to see the effects of the recipe steps as I build the recipe.
+This is optional, we'll show the results for demonstrative purposes. It doesn't need to be part of your modeling pipeline, but I find it assuring to see the effects of the recipe steps as I build the recipe.
 :::
 
 ## Step 2: Prep and bake
@@ -538,5 +541,4 @@ rsq_test <- rsq(office_test_pred, truth = imdb_rating, estimate = .pred) %>%
 
 -   It is not an independent piece of information; predicting the training set can only reflect what the model already knows.
 
--   Suppose you give a class a test, then give them the answers, then provide the same test.
-    The student scores on the second test do not accurately reflect what they know about the subject; these scores would probably be higher than their results on the first test.
+-   Suppose you give a class a test, then give them the answers, then provide the same test. The student scores on the second test do not accurately reflect what they know about the subject; these scores would probably be higher than their results on the first test.

@@ -44,11 +44,15 @@ library(countdown)
 ```{r}
 #| echo: true
 
-# load packages
-library(tidyverse)
-library(tidymodels)
-library(openintro)
-library(knitr)
+# List of packages for session
+.packages = c("openintro", "tidyverse", "tidymodels", "knitr")
+
+# Install CRAN packages (if not already installed)
+.inst <- .packages %in% installed.packages()
+if(length(.packages[!.inst]) > 0) install.packages(.packages[!.inst])
+
+# Load packages into session 
+lapply(.packages, require, character.only=TRUE, quietly = TRUE)
 
 # set default theme and larger font size for ggplot2
 ggplot2::theme_set(ggplot2::theme_minimal(base_size = 20))
@@ -250,7 +254,7 @@ email_pred %>%
 ## False positive and negative {.smaller}
 
 |                              | Email is spam                 | Email is not spam             |
-|------------------------------|-------------------------------|-------------------------------|
+|------------------------|------------------------|------------------------|
 | Email classified as spam     | True positive                 | False positive (Type 1 error) |
 | Email classified as not spam | False negative (Type 2 error) | True negative                 |
 
@@ -261,7 +265,7 @@ email_pred %>%
 ## Sensitivity and specificity {.smaller}
 
 |                              | Email is spam                     | Email is not spam                 |
-|------------------------------|-----------------------------------|-----------------------------------|
+|----------------------|-------------------------|-------------------------|
 | Email classified as spam     | True positive                     | False positive (**Type 1 error**) |
 | Email classified as not spam | False negative (**Type 2 error**) | True negative                     |
 
@@ -273,8 +277,7 @@ email_pred %>%
 . . .
 
 ::: question
-If you were designing a spam filter, would you want sensitivity and specificity to be high or low?
-What are the trade-offs associated with each decision?
+If you were designing a spam filter, would you want sensitivity and specificity to be high or low? What are the trade-offs associated with each decision?
 :::
 
 ## Evaluate the performance
