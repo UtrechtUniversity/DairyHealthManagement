@@ -1,0 +1,13 @@
+cvd_grid                Create a grid of different color-deficiency
+                        simulations of a plot
+edit_colors             Edit colors in existing plot or grid object
+gg_color_gradient       Generate a continuous color gradient to be
+                        colored via ggplot2's 'scale_fill_*' mechanism
+gg_color_swatches       Generate a set of color swatches to be colored
+                        via ggplot2's 'scale_fill_*' mechanism
+palette_OkabeIto        Color palette proposed by Okabe and Ito
+palette_plot            Visualize a color palette as swatches of
+                        colors, possibly with labels printed on top
+scale_colour_OkabeIto   Okabe-Ito color scale
+view_cvd                Interactively view cvd simulations of a figure
+                        or plot
