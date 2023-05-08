@@ -1,0 +1,287 @@
+{
+  "404.qmd": {
+    "404.html": "9046ca2b"
+  },
+  "ae/ae-0-movies.qmd": {
+    "ae-0-movies.html": "2a7c2ffa"
+  },
+  "ae/ae-1-dcbikeshare.qmd": {
+    "ae-1-dcbikeshare.html": "d3ecfbfb"
+  },
+  "ae/ae-10-flight-delays.qmd": {
+    "ae-10-flight-delays.html": "e69b6282"
+  },
+  "ae/ae-11-volcanoes.qmd": {
+    "ae-11-volcanoes.html": "436d4078"
+  },
+  "ae/ae-12-exam-3-review.qmd": {
+    "ae-12-exam-3-review.html": "9fbf9754"
+  },
+  "ae/ae-2-dcbikeshare.qmd": {
+    "ae-2-dcbikeshare.html": "e97548a5"
+  },
+  "ae/ae-3-duke-forest.qmd": {
+    "ae-3-duke-forest.html": "9c7370a8"
+  },
+  "ae/ae-4-exam-1-review.qmd": {
+    "ae-4-exam-1-review.html": "86df539f"
+  },
+  "ae/ae-5-the-office.qmd": {
+    "ae-5-the-office.html": "aa2d86ba"
+  },
+  "ae/ae-6-the-office-cv.qmd": {
+    "ae-6-the-office-cv.html": "43ac3935"
+  },
+  "ae/ae-7-exam-2-review.qmd": {
+    "ae-7-exam-2-review.html": "25da3825"
+  },
+  "ae/ae-8-rail-trail.qmd": {
+    "ae-8-rail-trail.html": "f9290934"
+  },
+  "ae/ae-9-odds.qmd": {
+    "ae-9-odds.html": "b7df3327"
+  },
+  "computing-access.qmd": {
+    "computing-access.html": "4f80fcd4"
+  },
+  "computing-pipelines.qmd": {
+    "computing-pipelines.html": "87d9b234"
+  },
+  "computing-troubleshooting.qmd": {
+    "computing-troubleshooting.html": "9b37150e"
+  },
+  "course-faq.qmd": {
+    "course-faq.html": "09a1b525"
+  },
+  "course-links.qmd": {
+    "course-links.html": "efc19beb"
+  },
+  "course-overview.qmd": {
+    "course-overview.html": "226acce6"
+  },
+  "course-support.qmd": {
+    "course-support.html": "23bc9416"
+  },
+  "course-syllabus.qmd": {
+    "course-syllabus.html": "bf118c39"
+  },
+  "course-team.qmd": {
+    "course-team.html": "2a274c05"
+  },
+  "exams/exam-1.qmd": {
+    "exam-1.html": "e5a75a6e"
+  },
+  "exams/exam-2.qmd": {
+    "exam-2.html": "51e765bb"
+  },
+  "exams/exam-3.qmd": {
+    "exam-3.html": "ec14ac98"
+  },
+  "hw/hw-1.qmd": {
+    "hw-1.html": "02bedb21"
+  },
+  "hw/hw-2.qmd": {
+    "hw-2.html": "55c0b076"
+  },
+  "hw/hw-3.qmd": {
+    "hw-3.html": "17d08d8a"
+  },
+  "hw/hw-4.qmd": {
+    "hw-4.html": "4f6431a2"
+  },
+  "hw/hw-5.qmd": {
+    "hw-5.html": "4949d916"
+  },
+  "labs/lab-0.qmd": {
+    "lab-0.html": "ce39c05e"
+  },
+  "labs/lab-1.qmd": {
+    "lab-1.html": "34bc0536"
+  },
+  "labs/lab-2.qmd": {
+    "lab-2.html": "e7928235"
+  },
+  "labs/lab-3.qmd": {
+    "lab-3.html": "bb5724b2"
+  },
+  "labs/lab-4.qmd": {
+    "lab-4.html": "f80654e8"
+  },
+  "labs/lab-5.qmd": {
+    "lab-5.html": "cd4491e9"
+  },
+  "labs/lab-6.qmd": {
+    "lab-6.html": "865fa3d4"
+  },
+  "labs/lab-7.qmd": {
+    "lab-7.html": "3528b57a"
+  },
+  "LICENSE.md": {
+    "LICENSE.html": "cf3438c0"
+  },
+  "project-description.qmd": {
+    "project-description.html": "bc0c38df"
+  },
+  "project-tips-resources.qmd": {
+    "project-tips-resources.html": "69f6e95b"
+  },
+  "index.qmd": {
+    "index.html": "58c4c5d5"
+  },
+  "slides/lab-0.qmd": {
+    "lab-0.html": "562682d0"
+  },
+  "slides/lab-1.qmd": {
+    "lab-1.html": "096b09e5"
+  },
+  "slides/lab-2.qmd": {
+    "lab-2.html": "eb4f777d"
+  },
+  "slides/lab-3.qmd": {
+    "lab-3.html": "aba49c8c"
+  },
+  "slides/lec-1.qmd": {
+    "lec-1.html": "0121e9ce"
+  },
+  "slides/lec-10.qmd": {
+    "lec-10.html": "c2825025"
+  },
+  "slides/lec-11.qmd": {
+    "lec-11.html": "8b6a18ef"
+  },
+  "slides/lec-12.qmd": {
+    "lec-12.html": "85158c02"
+  },
+  "slides/lec-13.qmd": {
+    "lec-13.html": "f8e447cd"
+  },
+  "slides/lec-14.qmd": {
+    "lec-14.html": "58620998"
+  },
+  "slides/lec-15.qmd": {
+    "lec-15.html": "7997bfbc"
+  },
+  "slides/lec-16.qmd": {
+    "lec-16.html": "8b5ef55a"
+  },
+  "slides/lec-17.qmd": {
+    "lec-17.html": "1c92977e"
+  },
+  "slides/lec-18.qmd": {
+    "lec-18.html": "5afe92e9"
+  },
+  "slides/lec-19.qmd": {
+    "lec-19.html": "73ee3745"
+  },
+  "slides/lec-2.qmd": {
+    "lec-2.html": "4c02e06b"
+  },
+  "slides/lec-20.qmd": {
+    "lec-20.html": "3ccb6ef2"
+  },
+  "slides/lec-21.qmd": {
+    "lec-21.html": "69b42db5"
+  },
+  "slides/lec-22.qmd": {
+    "lec-22.html": "cb9de129"
+  },
+  "slides/lec-23.qmd": {
+    "lec-23.html": "e98e4f48"
+  },
+  "slides/lec-24.qmd": {
+    "lec-24.html": "6bff9802"
+  },
+  "slides/lec-25.qmd": {
+    "lec-25.html": "6dbc56b8"
+  },
+  "slides/lec-26.qmd": {
+    "lec-26.html": "2bbefb70"
+  },
+  "slides/lec-27.qmd": {
+    "lec-27.html": "74a7fdda"
+  },
+  "slides/lec-28.qmd": {
+    "lec-28.html": "cefe14c7"
+  },
+  "slides/lec-3.qmd": {
+    "lec-3.html": "529cb22a"
+  },
+  "slides/lec-4.qmd": {
+    "lec-4.html": "2477b6b3"
+  },
+  "slides/lec-5.qmd": {
+    "lec-5.html": "e7a86d14"
+  },
+  "slides/lec-6.qmd": {
+    "lec-6.html": "562c8c5a"
+  },
+  "slides/lec-7.qmd": {
+    "lec-7.html": "f84525b2"
+  },
+  "slides/lec-8.qmd": {
+    "lec-8.html": "45cf93d4"
+  },
+  "slides/lec-9.qmd": {
+    "lec-9.html": "d01b3213"
+  },
+  "supplemental/log-transformations.qmd": {
+    "log-transformations.html": "71680fe6"
+  },
+  "supplemental/mlr-matrix.qmd": {
+    "mlr-matrix.html": "9853fc0a"
+  },
+  "supplemental/model-diagnostics-matrix.qmd": {
+    "model-diagnostics-matrix.html": "cd541807"
+  },
+  "supplemental/model-selection-criteria.qmd": {
+    "model-selection-criteria.html": "131b9e5f"
+  },
+  "supplemental/slr-derivations.qmd": {
+    "slr-derivations.html": "5c23254e"
+  },
+  "weeks/week-1.qmd": {
+    "week-1.html": "3ffff51b"
+  },
+  "weeks/week-10.qmd": {
+    "week-10.html": "ddaa187e"
+  },
+  "weeks/week-11.qmd": {
+    "week-11.html": "f05d5d1c"
+  },
+  "weeks/week-12.qmd": {
+    "week-12.html": "a7442758"
+  },
+  "weeks/week-13.qmd": {
+    "week-13.html": "06c85a42"
+  },
+  "weeks/week-14.qmd": {
+    "week-14.html": "9a66fad9"
+  },
+  "weeks/week-15.qmd": {
+    "week-15.html": "7f914f30"
+  },
+  "weeks/week-2.qmd": {
+    "week-2.html": "431ba466"
+  },
+  "weeks/week-3.qmd": {
+    "week-3.html": "11435f2d"
+  },
+  "weeks/week-4.qmd": {
+    "week-4.html": "f62bb845"
+  },
+  "weeks/week-5.qmd": {
+    "week-5.html": "97597272"
+  },
+  "weeks/week-6.qmd": {
+    "week-6.html": "e9c5b5e5"
+  },
+  "weeks/week-7.qmd": {
+    "week-7.html": "c14eea97"
+  },
+  "weeks/week-8.qmd": {
+    "week-8.html": "1a3f0b3d"
+  },
+  "weeks/week-9.qmd": {
+    "week-9.html": "44eff376"
+  }
+}
