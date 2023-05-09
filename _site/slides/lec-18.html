@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 210 - Spring 2022 - Logistic regression</title>
+  <title>DHM - Spring 2022 - Logistic regression</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -384,13 +384,13 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 210 - Spring 2022 - Logistic regression">
+<meta property="og:title" content="DHM - Spring 2022 - Logistic regression">
 <meta property="og:description" content="STA 210 - Spring 2022">
-<meta property="og:site-name" content="STA 210 - Spring 2022">
-<meta name="twitter:title" content="STA 210 - Spring 2022 - Logistic regression">
+<meta property="og:site-name" content="DHM - Spring 2022">
+<meta name="twitter:title" content="DHM - Spring 2022 - Logistic regression">
 <meta name="twitter:description" content="STA 210 - Spring 2022">
-<meta name="twitter:image" content="https://sta210-s22.github.io/website/images\twitter-card.png">
-<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:image" content="https://bovi-analytics.github.io/DairyHealthManagment/images\twitter-card.png">
+<meta name="twitter:creator" content="@MielHostens">
 <meta name="twitter:image-height" content="418">
 <meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
@@ -436,14 +436,30 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="computational-setup" class="slide level2">
 <h2>Computational setup</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># load packages</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(Stat2Data)</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># set default theme and larger font size for ggplot2</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># List of packages for session</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>.packages <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"tidymodels"</span>, <span class="st">"Stat2Data"</span>, <span class="st">"knitr"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Install CRAN packages (if not already installed)</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>.inst <span class="ot">&lt;-</span> .packages <span class="sc">%in%</span> <span class="fu">installed.packages</span>()</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="cf">if</span>(<span class="fu">length</span>(.packages[<span class="sc">!</span>.inst]) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">install.packages</span>(.packages[<span class="sc">!</span>.inst])</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Load packages into session </span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">lapply</span>(.packages, require, <span class="at">character.only=</span><span class="cn">TRUE</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] TRUE
+
+[[2]]
+[1] TRUE
+
+[[3]]
+[1] TRUE
+
+[[4]]
+[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># set default theme and larger font size for ggplot2</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -500,12 +516,12 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>0: no</p>
 </div><div class="column" style="width:60%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">data</span>(YouthRisk2009)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>sleep <span class="ot">&lt;-</span> YouthRisk2009 <span class="sc">%&gt;%</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Age), <span class="sc">!</span><span class="fu">is.na</span>(Sleep7))</span>
-<span id="cb2-5"><a href="#cb2-5"></a>sleep <span class="sc">%&gt;%</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="fu">relocate</span>(Age, Sleep7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">data</span>(YouthRisk2009)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>sleep <span class="ot">&lt;-</span> YouthRisk2009 <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(Age), <span class="sc">!</span><span class="fu">is.na</span>(Sleep7))</span>
+<span id="cb4-5"><a href="#cb4-5"></a>sleep <span class="sc">%&gt;%</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">relocate</span>(Age, Sleep7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 446 × 6
      Age Sleep7 Sleep           SmokeLife SmokeDaily MarijuaEver
@@ -529,9 +545,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="plot-the-data" class="slide level2">
 <h2>Plot the data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(sleep, <span class="fu">aes</span>(<span class="at">x =</span> Age, <span class="at">y =</span> Sleep7)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Getting 7+ hours of sleep"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(sleep, <span class="fu">aes</span>(<span class="at">x =</span> Age, <span class="at">y =</span> Sleep7)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Getting 7+ hours of sleep"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="lec-18_files/figure-revealjs/unnamed-chunk-4-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section>
@@ -559,23 +575,23 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="the-code" class="slide level2">
 <h2>The code</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(sleep_age, <span class="fu">aes</span>(<span class="at">x =</span> Age, <span class="at">y =</span> prop)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span><span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>), </span>
-<span id="cb5-5"><a href="#cb5-5"></a>              <span class="at">fullrange =</span> <span class="cn">TRUE</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"P(7+ hours of sleep)"</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">40</span>) <span class="sc">+</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(sleep_age, <span class="fu">aes</span>(<span class="at">x =</span> Age, <span class="at">y =</span> prop)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">lty =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span><span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>), </span>
+<span id="cb7-5"><a href="#cb7-5"></a>              <span class="at">fullrange =</span> <span class="cn">TRUE</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"P(7+ hours of sleep)"</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">40</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="different-types-of-models" class="slide level2">
 <h2>Different types of models</h2>
 <table>
 <colgroup>
-<col style="width: 31%">
-<col style="width: 13%">
-<col style="width: 55%">
+<col style="width: 27%">
+<col style="width: 21%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -630,9 +646,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="are-teenagers-getting-enough-sleep" class="slide level2">
 <h2>Are teenagers getting enough sleep?</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>sleep <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">count</span>(Sleep7) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">mutate</span>(<span class="at">p =</span> <span class="fu">round</span>(n <span class="sc">/</span> <span class="fu">sum</span>(n), <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>sleep <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">count</span>(Sleep7) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">mutate</span>(<span class="at">p =</span> <span class="fu">round</span>(n <span class="sc">/</span> <span class="fu">sum</span>(n), <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   Sleep7     n     p
@@ -700,13 +716,13 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="data-heart" class="slide level2">
 <h2>Data: <code>heart</code></h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>heart_disease <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"slides"</span>, <span class="st">"data/framingham.csv"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">select</span>(age, TenYearCHD) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">mutate</span>(<span class="at">high_risk =</span> <span class="fu">as.factor</span>(TenYearCHD)) <span class="sc">%&gt;%</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">select</span>(age, high_risk)</span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a>heart_disease</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>heart_disease <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"slides"</span>, <span class="st">"data/framingham.csv"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">select</span>(age, TenYearCHD) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">drop_na</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">mutate</span>(<span class="at">high_risk =</span> <span class="fu">as.factor</span>(TenYearCHD)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">select</span>(age, high_risk)</span>
+<span id="cb10-6"><a href="#cb10-6"></a></span>
+<span id="cb10-7"><a href="#cb10-7"></a>heart_disease</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,240 × 2
      age high_risk
@@ -728,22 +744,22 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="high-risk-vs.-age" class="slide level2">
 <h2>High risk vs.&nbsp;age</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(heart_disease, <span class="fu">aes</span>(<span class="at">x =</span> high_risk, <span class="at">y =</span> age)) <span class="sc">+</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"High risk - 1: yes, 0: no"</span>,</span>
-<span id="cb10-4"><a href="#cb10-4"></a>       <span class="at">y =</span> <span class="st">"Age"</span>, </span>
-<span id="cb10-5"><a href="#cb10-5"></a>       <span class="at">title =</span> <span class="st">"Age vs. High risk of heart disease"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">ggplot</span>(heart_disease, <span class="fu">aes</span>(<span class="at">x =</span> high_risk, <span class="at">y =</span> age)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"High risk - 1: yes, 0: no"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4"></a>       <span class="at">y =</span> <span class="st">"Age"</span>, </span>
+<span id="cb12-5"><a href="#cb12-5"></a>       <span class="at">title =</span> <span class="st">"Age vs. High risk of heart disease"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="lec-18_files/figure-revealjs/unnamed-chunk-12-1.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section>
 <section id="lets-fit-the-model" class="slide level2">
 <h2>Let’s fit the model</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>heart_disease_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">fit</span>(high_risk <span class="sc">~</span> age, <span class="at">data =</span> heart_disease, <span class="at">family =</span> <span class="st">"binomial"</span>)</span>
-<span id="cb11-4"><a href="#cb11-4"></a></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="fu">tidy</span>(heart_disease_fit) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>heart_disease_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">fit</span>(high_risk <span class="sc">~</span> age, <span class="at">data =</span> heart_disease, <span class="at">family =</span> <span class="st">"binomial"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="fu">tidy</span>(heart_disease_fit) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <thead>
@@ -778,7 +794,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="the-model" class="slide level2">
 <h2>The model</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tidy</span>(heart_disease_fit) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">tidy</span>(heart_disease_fit) <span class="sc">%&gt;%</span> <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <thead>
@@ -816,7 +832,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="predicted-log-odds" class="slide level2">
 <h2>Predicted log odds</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">augment</span>(heart_disease_fit<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">augment</span>(heart_disease_fit<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,240 × 8
    high_risk   age .fitted .resid     .hat .sigma   .cooksd .std.resid
@@ -842,7 +858,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="predicted-probabilities" class="slide level2">
 <h2>Predicted probabilities</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease, <span class="at">type =</span> <span class="st">"prob"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease, <span class="at">type =</span> <span class="st">"prob"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,240 × 2
    .pred_0 .pred_1
@@ -867,7 +883,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="predicted-classes" class="slide level2">
 <h2>Predicted classes</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease, <span class="at">type =</span> <span class="st">"class"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease, <span class="at">type =</span> <span class="st">"class"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,240 × 1
    .pred_class
@@ -890,7 +906,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Default prediction</h2>
 <p>For a logistic regression, the default prediction is the <code>class</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,240 × 1
    .pred_class
@@ -915,9 +931,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <p>What does the following table show?</p>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease) <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">bind_cols</span>(heart_disease) <span class="sc">%&gt;%</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">count</span>(high_risk, .pred_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">predict</span>(heart_disease_fit, <span class="at">new_data =</span> heart_disease) <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">bind_cols</span>(heart_disease) <span class="sc">%&gt;%</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">count</span>(high_risk, .pred_class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   high_risk .pred_class     n

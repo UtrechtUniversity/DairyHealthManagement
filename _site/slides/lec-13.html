@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 210 - Spring 2022 - Feature engineering</title>
+  <title>DHM - Spring 2022 - Feature engineering</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -384,13 +384,13 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 210 - Spring 2022 - Feature engineering">
+<meta property="og:title" content="DHM - Spring 2022 - Feature engineering">
 <meta property="og:description" content="STA 210 - Spring 2022">
-<meta property="og:site-name" content="STA 210 - Spring 2022">
-<meta name="twitter:title" content="STA 210 - Spring 2022 - Feature engineering">
+<meta property="og:site-name" content="DHM - Spring 2022">
+<meta name="twitter:title" content="DHM - Spring 2022 - Feature engineering">
 <meta name="twitter:description" content="STA 210 - Spring 2022">
-<meta name="twitter:image" content="https://sta210-s22.github.io/website/images\twitter-card.png">
-<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:image" content="https://bovi-analytics.github.io/DairyHealthManagment/images\twitter-card.png">
+<meta name="twitter:creator" content="@MielHostens">
 <meta name="twitter:image-height" content="418">
 <meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
@@ -439,14 +439,30 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="computational-setup" class="slide level2">
 <h2>Computational setup</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># load packages</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(gghighlight)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># set default theme and larger font size for ggplot2</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># List of packages for session</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>.packages <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"tidymodels"</span>, <span class="st">"gghighlight"</span>, <span class="st">"knitr"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Install CRAN packages (if not already installed)</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>.inst <span class="ot">&lt;-</span> .packages <span class="sc">%in%</span> <span class="fu">installed.packages</span>()</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="cf">if</span>(<span class="fu">length</span>(.packages[<span class="sc">!</span>.inst]) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">install.packages</span>(.packages[<span class="sc">!</span>.inst])</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Load packages into session </span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">lapply</span>(.packages, require, <span class="at">character.only=</span><span class="cn">TRUE</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] TRUE
+
+[[2]]
+[1] TRUE
+
+[[3]]
+[1] TRUE
+
+[[4]]
+[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># set default theme and larger font size for ggplot2</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -465,8 +481,8 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <li class="fragment"><p>Goal: Predict <code>imdb_rating</code> from other variables in the dataset</p></li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>office_ratings <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"slides"</span>, <span class="st">"data/office_ratings.csv"</span>))</span>
-<span id="cb2-2"><a href="#cb2-2"></a>office_ratings</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>office_ratings <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"slides"</span>, <span class="st">"data/office_ratings.csv"</span>))</span>
+<span id="cb4-2"><a href="#cb4-2"></a>office_ratings</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 188 × 6
    season episode title             imdb_rating total_votes air_date  
@@ -494,21 +510,21 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <h2>Train / test</h2>
 <p><strong>Step 1:</strong> Create an initial split:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb4-2"><a href="#cb4-2"></a>office_split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(office_ratings) <span class="co"># prop = 3/4 by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>office_split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(office_ratings) <span class="co"># prop = 3/4 by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Step 2:</strong> Save training data</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>office_train <span class="ot">&lt;-</span> <span class="fu">training</span>(office_split)</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">dim</span>(office_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>office_train <span class="ot">&lt;-</span> <span class="fu">training</span>(office_split)</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">dim</span>(office_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 141   6</code></pre>
 </div>
 </div>
 <p><strong>Step 3:</strong> Save testing data</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>office_test  <span class="ot">&lt;-</span> <span class="fu">testing</span>(office_split)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">dim</span>(office_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>office_test  <span class="ot">&lt;-</span> <span class="fu">testing</span>(office_split)</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">dim</span>(office_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 47  6</code></pre>
 </div>
@@ -517,7 +533,7 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="training-data" class="slide level2">
 <h2>Training data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>office_train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>office_train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 141 × 6
    season episode title               imdb_rating total_votes air_date  
@@ -561,32 +577,32 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="initiate-a-recipe" class="slide level2">
 <h2>Initiate a recipe</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>office_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
-<span id="cb11-2"><a href="#cb11-2"></a>  imdb_rating <span class="sc">~</span> .,    <span class="co"># formula</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="at">data =</span> office_train <span class="co"># data for cataloguing names and types of variables</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>  )</span>
-<span id="cb11-5"><a href="#cb11-5"></a></span>
-<span id="cb11-6"><a href="#cb11-6"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>office_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  imdb_rating <span class="sc">~</span> .,    <span class="co"># formula</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="at">data =</span> office_train <span class="co"># data for cataloguing names and types of variables</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  )</span>
+<span id="cb13-5"><a href="#cb13-5"></a></span>
+<span id="cb13-6"><a href="#cb13-6"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-1-alter-roles" class="slide level2">
 <h2>Step 1: Alter roles</h2>
 <p><code>title</code> isn’t a predictor, but we might want to keep it around as an ID</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">update_role</span>(title, <span class="at">new_role =</span> <span class="st">"ID"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3"></a></span>
-<span id="cb12-4"><a href="#cb12-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">update_role</span>(title, <span class="at">new_role =</span> <span class="st">"ID"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-2-add-features" class="slide level2">
 <h2>Step 2: Add features</h2>
 <p>New features for day of week and month</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">step_date</span>(air_date, <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"dow"</span>, <span class="st">"month"</span>))</span>
-<span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">step_date</span>(air_date, <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"dow"</span>, <span class="st">"month"</span>))</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="working-with-recipes" class="slide level2 smaller">
@@ -615,9 +631,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="step-2-prep-and-bake" class="slide level2">
 <h2>Step 2: Prep and bake</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 141
 Columns: 8
@@ -636,22 +652,22 @@ $ air_date_month &lt;fct&gt; Mar, Jan, Nov, Oct, May, Sep, Feb, May, Apr, Jan, M
 <h2>Step 3: Add more features</h2>
 <p>Identify holidays in <code>air_date</code>, then remove <code>air_date</code></p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|2,3,4,5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">step_holiday</span>(</span>
-<span id="cb16-3"><a href="#cb16-3"></a>    air_date, </span>
-<span id="cb16-4"><a href="#cb16-4"></a>    <span class="at">holidays =</span> <span class="fu">c</span>(<span class="st">"USThanksgivingDay"</span>, <span class="st">"USChristmasDay"</span>, <span class="st">"USNewYearsDay"</span>, <span class="st">"USIndependenceDay"</span>), </span>
-<span id="cb16-5"><a href="#cb16-5"></a>    <span class="at">keep_original_cols =</span> <span class="cn">FALSE</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a>  )</span>
-<span id="cb16-7"><a href="#cb16-7"></a></span>
-<span id="cb16-8"><a href="#cb16-8"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="|2,3,4,5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">step_holiday</span>(</span>
+<span id="cb18-3"><a href="#cb18-3"></a>    air_date, </span>
+<span id="cb18-4"><a href="#cb18-4"></a>    <span class="at">holidays =</span> <span class="fu">c</span>(<span class="st">"USThanksgivingDay"</span>, <span class="st">"USChristmasDay"</span>, <span class="st">"USNewYearsDay"</span>, <span class="st">"USIndependenceDay"</span>), </span>
+<span id="cb18-5"><a href="#cb18-5"></a>    <span class="at">keep_original_cols =</span> <span class="cn">FALSE</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a>  )</span>
+<span id="cb18-7"><a href="#cb18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-3-prep-and-bake" class="slide level2 smaller">
 <h2>Step 3: Prep and bake</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 141
 Columns: 11
@@ -673,18 +689,18 @@ $ air_date_USIndependenceDay &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 <h2>Step 4: Convert numbers to factors</h2>
 <p>Convert <code>season</code> to factor</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">step_num2factor</span>(season, <span class="at">levels =</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>))</span>
-<span id="cb19-3"><a href="#cb19-3"></a></span>
-<span id="cb19-4"><a href="#cb19-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">step_num2factor</span>(season, <span class="at">levels =</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>))</span>
+<span id="cb21-3"><a href="#cb21-3"></a></span>
+<span id="cb21-4"><a href="#cb21-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-4-prep-and-bake" class="slide level2 smaller">
 <h2>Step 4: Prep and bake</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 141
 Columns: 11
@@ -706,18 +722,18 @@ $ air_date_USIndependenceDay &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 <h2>Step 5: Make dummy variables</h2>
 <p>Convert all nominal (categorical) predictors to factors</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>())</span>
-<span id="cb22-3"><a href="#cb22-3"></a></span>
-<span id="cb22-4"><a href="#cb22-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>())</span>
+<span id="cb24-3"><a href="#cb24-3"></a></span>
+<span id="cb24-4"><a href="#cb24-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-5-prep-and-bake" class="slide level2 smaller">
 <h2>Step 5: Prep and bake</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 141
 Columns: 33
@@ -761,18 +777,18 @@ $ air_date_month_Dec         &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 <h2>Step 6: Remove zero variance predictors</h2>
 <p>Remove all predictors that contain only a single value</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">step_zv</span>(<span class="fu">all_predictors</span>())</span>
-<span id="cb25-3"><a href="#cb25-3"></a></span>
-<span id="cb25-4"><a href="#cb25-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>office_rec <span class="ot">&lt;-</span> office_rec <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">step_zv</span>(<span class="fu">all_predictors</span>())</span>
+<span id="cb27-3"><a href="#cb27-3"></a></span>
+<span id="cb27-4"><a href="#cb27-4"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-6-prep-and-bake" class="slide level2 smaller">
 <h2>Step 6: Prep and bake</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>office_rec_trained <span class="ot">&lt;-</span> <span class="fu">prep</span>(office_rec)</span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">bake</span>(office_rec_trained, office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 141
 Columns: 22
@@ -804,29 +820,29 @@ $ air_date_month_Dec &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 <section id="putting-it-altogether" class="slide level2 smaller">
 <h2>Putting it altogether</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>office_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(imdb_rating <span class="sc">~</span> ., <span class="at">data =</span> office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a href="#cb28-2"></a>  <span class="co"># make title's role ID</span></span>
-<span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">update_role</span>(title, <span class="at">new_role =</span> <span class="st">"ID"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb28-4"><a href="#cb28-4"></a>  <span class="co"># extract day of week and month of air_date</span></span>
-<span id="cb28-5"><a href="#cb28-5"></a>  <span class="fu">step_date</span>(air_date, <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"dow"</span>, <span class="st">"month"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb28-6"><a href="#cb28-6"></a>  <span class="co"># identify holidays and add indicators</span></span>
-<span id="cb28-7"><a href="#cb28-7"></a>  <span class="fu">step_holiday</span>(</span>
-<span id="cb28-8"><a href="#cb28-8"></a>    air_date, </span>
-<span id="cb28-9"><a href="#cb28-9"></a>    <span class="at">holidays =</span> <span class="fu">c</span>(<span class="st">"USThanksgivingDay"</span>, <span class="st">"USChristmasDay"</span>, <span class="st">"USNewYearsDay"</span>, <span class="st">"USIndependenceDay"</span>), </span>
-<span id="cb28-10"><a href="#cb28-10"></a>    <span class="at">keep_original_cols =</span> <span class="cn">FALSE</span></span>
-<span id="cb28-11"><a href="#cb28-11"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb28-12"><a href="#cb28-12"></a>  <span class="co"># turn season into factor</span></span>
-<span id="cb28-13"><a href="#cb28-13"></a>  <span class="fu">step_num2factor</span>(season, <span class="at">levels =</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb28-14"><a href="#cb28-14"></a>  <span class="co"># make dummy variables</span></span>
-<span id="cb28-15"><a href="#cb28-15"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb28-16"><a href="#cb28-16"></a>  <span class="co"># remove zero variance predictors</span></span>
-<span id="cb28-17"><a href="#cb28-17"></a>  <span class="fu">step_zv</span>(<span class="fu">all_predictors</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>office_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(imdb_rating <span class="sc">~</span> ., <span class="at">data =</span> office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="co"># make title's role ID</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">update_role</span>(title, <span class="at">new_role =</span> <span class="st">"ID"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>  <span class="co"># extract day of week and month of air_date</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a>  <span class="fu">step_date</span>(air_date, <span class="at">features =</span> <span class="fu">c</span>(<span class="st">"dow"</span>, <span class="st">"month"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb30-6"><a href="#cb30-6"></a>  <span class="co"># identify holidays and add indicators</span></span>
+<span id="cb30-7"><a href="#cb30-7"></a>  <span class="fu">step_holiday</span>(</span>
+<span id="cb30-8"><a href="#cb30-8"></a>    air_date, </span>
+<span id="cb30-9"><a href="#cb30-9"></a>    <span class="at">holidays =</span> <span class="fu">c</span>(<span class="st">"USThanksgivingDay"</span>, <span class="st">"USChristmasDay"</span>, <span class="st">"USNewYearsDay"</span>, <span class="st">"USIndependenceDay"</span>), </span>
+<span id="cb30-10"><a href="#cb30-10"></a>    <span class="at">keep_original_cols =</span> <span class="cn">FALSE</span></span>
+<span id="cb30-11"><a href="#cb30-11"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb30-12"><a href="#cb30-12"></a>  <span class="co"># turn season into factor</span></span>
+<span id="cb30-13"><a href="#cb30-13"></a>  <span class="fu">step_num2factor</span>(season, <span class="at">levels =</span> <span class="fu">as.character</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb30-14"><a href="#cb30-14"></a>  <span class="co"># make dummy variables</span></span>
+<span id="cb30-15"><a href="#cb30-15"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb30-16"><a href="#cb30-16"></a>  <span class="co"># remove zero variance predictors</span></span>
+<span id="cb30-17"><a href="#cb30-17"></a>  <span class="fu">step_zv</span>(<span class="fu">all_predictors</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="putting-it-altogether-1" class="slide level2 smaller">
 <h2>Putting it altogether</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>office_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -837,10 +853,10 @@ $ air_date_month_Dec &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 <section id="specify-model" class="slide level2">
 <h2>Specify model</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>office_spec <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>)</span>
-<span id="cb30-3"><a href="#cb30-3"></a></span>
-<span id="cb30-4"><a href="#cb30-4"></a>office_spec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>office_spec <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3"></a></span>
+<span id="cb32-4"><a href="#cb32-4"></a>office_spec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Linear Regression Model Specification (regression)
 
@@ -852,9 +868,9 @@ Computational engine: lm </code></pre>
 <h2>Build workflow</h2>
 <p><strong>Workflows</strong> bring together models and recipes so that they can be easily applied to both the training and test data.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>office_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">add_model</span>(office_spec) <span class="sc">%&gt;%</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">add_recipe</span>(office_rec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>office_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">add_model</span>(office_spec) <span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">add_recipe</span>(office_rec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p><em>See next slide for workflow…</em></p>
@@ -862,7 +878,7 @@ Computational engine: lm </code></pre>
 <section id="view-workflow" class="slide level2">
 <h2>View workflow</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>office_wflow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>office_wflow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>══ Workflow ════════════════════════════════════════════════════════════════════
 Preprocessor: Recipe
@@ -887,10 +903,10 @@ Computational engine: lm </code></pre>
 <section id="fit-model-to-training-data" class="slide level2 smaller">
 <h2>Fit model to training data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>office_fit <span class="ot">&lt;-</span> office_wflow <span class="sc">%&gt;%</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">fit</span>(<span class="at">data =</span> office_train)</span>
-<span id="cb35-3"><a href="#cb35-3"></a></span>
-<span id="cb35-4"><a href="#cb35-4"></a><span class="fu">tidy</span>(office_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>office_fit <span class="ot">&lt;-</span> office_wflow <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">fit</span>(<span class="at">data =</span> office_train)</span>
+<span id="cb37-3"><a href="#cb37-3"></a></span>
+<span id="cb37-4"><a href="#cb37-4"></a><span class="fu">tidy</span>(office_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 21 × 5
    term         estimate std.error statistic  p.value
@@ -916,7 +932,7 @@ Computational engine: lm </code></pre>
 <section id="model-fit-summary" class="slide level2">
 <h2>Model fit summary</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">tidy</span>(office_fit) <span class="sc">%&gt;%</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">tidy</span>(office_fit) <span class="sc">%&gt;%</span> <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 21 × 5
    term                estimate std.error statistic  p.value
@@ -953,10 +969,10 @@ Computational engine: lm </code></pre>
 <section id="make-predictions-for-training-data" class="slide level2">
 <h2>Make predictions for training data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>office_train_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(office_fit, office_train) <span class="sc">%&gt;%</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">bind_cols</span>(office_train <span class="sc">%&gt;%</span> <span class="fu">select</span>(imdb_rating, title))</span>
-<span id="cb39-3"><a href="#cb39-3"></a></span>
-<span id="cb39-4"><a href="#cb39-4"></a>office_train_pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>office_train_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(office_fit, office_train) <span class="sc">%&gt;%</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a>  <span class="fu">bind_cols</span>(office_train <span class="sc">%&gt;%</span> <span class="fu">select</span>(imdb_rating, title))</span>
+<span id="cb41-3"><a href="#cb41-3"></a></span>
+<span id="cb41-4"><a href="#cb41-4"></a>office_train_pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 141 × 3
    .pred imdb_rating title              
@@ -980,7 +996,7 @@ Computational engine: lm </code></pre>
 <p>Percentage of variability in the IMDB ratings explained by the model.</p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">rsq</span>(office_train_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">rsq</span>(office_train_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   .metric .estimator .estimate
@@ -1001,7 +1017,7 @@ Computational engine: lm </code></pre>
 <p><span class="math display">\[ RMSE = \sqrt{\frac{\sum_{i = 1}^n (y_i - \hat{y}_i)^2}{n}} \]</span></p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">rmse</span>(office_train_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">rmse</span>(office_train_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   .metric .estimator .estimate
@@ -1022,7 +1038,7 @@ Computational engine: lm </code></pre>
 <p>Is this RMSE considered low or high?</p>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">rmse</span>(office_train_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">rmse</span>(office_train_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   .metric .estimator .estimate
@@ -1034,8 +1050,8 @@ Computational engine: lm </code></pre>
 <div class="fragment">
 <p>Depends…</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>office_train <span class="sc">%&gt;%</span></span>
-<span id="cb47-2"><a href="#cb47-2"></a>  <span class="fu">summarise</span>(<span class="at">min =</span> <span class="fu">min</span>(imdb_rating), <span class="at">max =</span> <span class="fu">max</span>(imdb_rating))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>office_train <span class="sc">%&gt;%</span></span>
+<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">summarise</span>(<span class="at">min =</span> <span class="fu">min</span>(imdb_rating), <span class="at">max =</span> <span class="fu">max</span>(imdb_rating))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
     min   max
@@ -1052,10 +1068,10 @@ Computational engine: lm </code></pre>
 <section id="make-predictions-for-testing-data" class="slide level2">
 <h2>Make predictions for testing data</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>office_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(office_fit, office_test) <span class="sc">%&gt;%</span></span>
-<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">bind_cols</span>(office_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(imdb_rating, title))</span>
-<span id="cb49-3"><a href="#cb49-3"></a></span>
-<span id="cb49-4"><a href="#cb49-4"></a>office_test_pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>office_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(office_fit, office_test) <span class="sc">%&gt;%</span></span>
+<span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">bind_cols</span>(office_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(imdb_rating, title))</span>
+<span id="cb51-3"><a href="#cb51-3"></a></span>
+<span id="cb51-4"><a href="#cb51-4"></a>office_test_pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 47 × 3
    .pred imdb_rating title              
@@ -1078,7 +1094,7 @@ Computational engine: lm </code></pre>
 <h2>Evaluate performance for testing data</h2>
 <p>RMSE of model fit to <strong>testing</strong> data</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">rmse</span>(office_test_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">rmse</span>(office_test_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   .metric .estimator .estimate
@@ -1088,7 +1104,7 @@ Computational engine: lm </code></pre>
 </div>
 <p>R-sq of model fit to <strong>testing</strong> data</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">rsq</span>(office_test_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">rsq</span>(office_test_pred, <span class="at">truth =</span> imdb_rating, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   .metric .estimator .estimate
