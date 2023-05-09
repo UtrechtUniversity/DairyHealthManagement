@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
-  <title>STA 210 - Spring 2022 - Model comparison</title>
+  <title>DHM - Spring 2022 - Model comparison</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -387,13 +387,13 @@
   
   <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<meta property="og:title" content="STA 210 - Spring 2022 - Model comparison">
+<meta property="og:title" content="DHM - Spring 2022 - Model comparison">
 <meta property="og:description" content="STA 210 - Spring 2022">
-<meta property="og:site-name" content="STA 210 - Spring 2022">
-<meta name="twitter:title" content="STA 210 - Spring 2022 - Model comparison">
+<meta property="og:site-name" content="DHM - Spring 2022">
+<meta name="twitter:title" content="DHM - Spring 2022 - Model comparison">
 <meta name="twitter:description" content="STA 210 - Spring 2022">
-<meta name="twitter:image" content="https://sta210-s22.github.io/website/images\twitter-card.png">
-<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:image" content="https://bovi-analytics.github.io/DairyHealthManagment/images\twitter-card.png">
+<meta name="twitter:creator" content="@MielHostens">
 <meta name="twitter:image-height" content="418">
 <meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
@@ -445,15 +445,49 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="computational-setup" class="slide level2">
 <h2>Computational setup</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># load packages</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># set default theme and larger font size for ggplot2</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># List of packages for session</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>.packages <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"countdown"</span>, <span class="st">"tidyverse"</span>, <span class="st">"tidymodels"</span>, <span class="st">"patchwork"</span>, <span class="st">"kableExtra"</span>, <span class="st">"janitor"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># Install CRAN packages (if not already installed)</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>.inst <span class="ot">&lt;-</span> .packages <span class="sc">%in%</span> <span class="fu">installed.packages</span>()</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="cf">if</span>(<span class="fu">length</span>(.packages[<span class="sc">!</span>.inst]) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">install.packages</span>(.packages[<span class="sc">!</span>.inst])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/janitor_2.2.0.zip' ...
+    OK [downloaded 280 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/snakecase_0.11.0.zip' ...
+    OK [file is up to date]
+Installing snakecase [0.11.0] ...
+    OK [installed binary]
+Moving snakecase [0.11.0] into the cache ...
+    OK [moved to cache in 5.3 milliseconds]
+Installing janitor [2.2.0] ...
+    OK [installed binary]
+Moving janitor [2.2.0] into the cache ...
+    OK [moved to cache in 5.7 milliseconds]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Load packages into session </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">lapply</span>(.packages, require, <span class="at">character.only=</span><span class="cn">TRUE</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] TRUE
+
+[[2]]
+[1] TRUE
+
+[[3]]
+[1] TRUE
+
+[[4]]
+[1] TRUE
+
+[[5]]
+[1] TRUE
+
+[[6]]
+[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># set default theme and larger font size for ggplot2</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -509,11 +543,11 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="relevel-categorical-predictors" class="slide level2">
 <h2>Relevel categorical predictors</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tips <span class="ot">&lt;-</span> tips <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="at">Meal =</span> <span class="fu">fct_relevel</span>(Meal, <span class="st">"Lunch"</span>, <span class="st">"Dinner"</span>, <span class="st">"Late Night"</span>),</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="at">Age  =</span> <span class="fu">fct_relevel</span>(Age, <span class="st">"Yadult"</span>, <span class="st">"Middle"</span>, <span class="st">"SenCit"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>tips <span class="ot">&lt;-</span> tips <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="at">Meal =</span> <span class="fu">fct_relevel</span>(Meal, <span class="st">"Lunch"</span>, <span class="st">"Dinner"</span>, <span class="st">"Late Night"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="at">Age  =</span> <span class="fu">fct_relevel</span>(Age, <span class="st">"Yadult"</span>, <span class="st">"Middle"</span>, <span class="st">"SenCit"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="predictors-again" class="slide level2">
@@ -527,12 +561,12 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="fit-and-summarize-model" class="slide level2 smaller">
 <h2>Fit and summarize model</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>tip_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> Age, <span class="at">data =</span> tips)</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="fu">tidy</span>(tip_fit, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tip_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> Age, <span class="at">data =</span> tips)</span>
+<span id="cb8-4"><a href="#cb8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="fu">tidy</span>(tip_fit, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <table>
@@ -662,9 +696,9 @@ Dr.&nbsp;Mine Çetinkaya-Rundel
 <section id="anova-output" class="slide level2">
 <h2>ANOVA output</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">anova</span>(tip_fit<span class="sc">$</span>fit) <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">anova</span>(tip_fit<span class="sc">$</span>fit) <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">tidy</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <table>
@@ -824,7 +858,7 @@ R^2 = \frac{SS_{Model}}{SS_{Total}} = 1 - \frac{SS_{Error}}{SS_{Total}} = 1 - \f
 </div>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">glance</span>(tip_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">glance</span>(tip_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
@@ -874,16 +908,16 @@ R^2 = \frac{SS_{Model}}{SS_{Total}} = 1 - \frac{SS_{Error}}{SS_{Total}} = 1 - \f
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tip_fit_1 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
-<span id="cb8-4"><a href="#cb8-4"></a>            Age <span class="sc">+</span> </span>
-<span id="cb8-5"><a href="#cb8-5"></a>            Meal,</span>
-<span id="cb8-6"><a href="#cb8-6"></a>      </span>
-<span id="cb8-7"><a href="#cb8-7"></a>      <span class="at">data =</span> tips)</span>
-<span id="cb8-8"><a href="#cb8-8"></a></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">glance</span>(tip_fit_1) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-10"><a href="#cb8-10"></a>  <span class="fu">select</span>(r.squared, adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>tip_fit_1 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
+<span id="cb12-4"><a href="#cb12-4"></a>            Age <span class="sc">+</span> </span>
+<span id="cb12-5"><a href="#cb12-5"></a>            Meal,</span>
+<span id="cb12-6"><a href="#cb12-6"></a>      </span>
+<span id="cb12-7"><a href="#cb12-7"></a>      <span class="at">data =</span> tips)</span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="fu">glance</span>(tip_fit_1) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">select</span>(r.squared, adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   r.squared adj.r.squared
@@ -893,16 +927,16 @@ R^2 = \frac{SS_{Model}}{SS_{Total}} = 1 - \frac{SS_{Error}}{SS_{Total}} = 1 - \f
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>tip_fit_2 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
-<span id="cb10-4"><a href="#cb10-4"></a>            Age <span class="sc">+</span> </span>
-<span id="cb10-5"><a href="#cb10-5"></a>            Meal <span class="sc">+</span> </span>
-<span id="cb10-6"><a href="#cb10-6"></a>            Day, </span>
-<span id="cb10-7"><a href="#cb10-7"></a>      <span class="at">data =</span> tips)</span>
-<span id="cb10-8"><a href="#cb10-8"></a></span>
-<span id="cb10-9"><a href="#cb10-9"></a><span class="fu">glance</span>(tip_fit_2) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-10"><a href="#cb10-10"></a>  <span class="fu">select</span>(r.squared, adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>tip_fit_2 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4"></a>            Age <span class="sc">+</span> </span>
+<span id="cb14-5"><a href="#cb14-5"></a>            Meal <span class="sc">+</span> </span>
+<span id="cb14-6"><a href="#cb14-6"></a>            Day, </span>
+<span id="cb14-7"><a href="#cb14-7"></a>      <span class="at">data =</span> tips)</span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="fu">glance</span>(tip_fit_2) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-10"><a href="#cb14-10"></a>  <span class="fu">select</span>(r.squared, adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   r.squared adj.r.squared
@@ -974,16 +1008,16 @@ R^2 = \frac{SS_{Model}}{SS_{Total}} = 1 - \frac{SS_{Error}}{SS_{Total}} = 1 - \f
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>tip_fit_1 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
-<span id="cb12-4"><a href="#cb12-4"></a>            Age <span class="sc">+</span> </span>
-<span id="cb12-5"><a href="#cb12-5"></a>            Meal,</span>
-<span id="cb12-6"><a href="#cb12-6"></a>      </span>
-<span id="cb12-7"><a href="#cb12-7"></a>      <span class="at">data =</span> tips)</span>
-<span id="cb12-8"><a href="#cb12-8"></a></span>
-<span id="cb12-9"><a href="#cb12-9"></a><span class="fu">glance</span>(tip_fit_1) <span class="sc">%&gt;%</span> </span>
-<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">select</span>(AIC, BIC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>tip_fit_1 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
+<span id="cb16-4"><a href="#cb16-4"></a>            Age <span class="sc">+</span> </span>
+<span id="cb16-5"><a href="#cb16-5"></a>            Meal,</span>
+<span id="cb16-6"><a href="#cb16-6"></a>      </span>
+<span id="cb16-7"><a href="#cb16-7"></a>      <span class="at">data =</span> tips)</span>
+<span id="cb16-8"><a href="#cb16-8"></a></span>
+<span id="cb16-9"><a href="#cb16-9"></a><span class="fu">glance</span>(tip_fit_1) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-10"><a href="#cb16-10"></a>  <span class="fu">select</span>(AIC, BIC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
     AIC   BIC
@@ -993,16 +1027,16 @@ R^2 = \frac{SS_{Model}}{SS_{Total}} = 1 - \frac{SS_{Error}}{SS_{Total}} = 1 - \f
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>tip_fit_2 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
-<span id="cb14-4"><a href="#cb14-4"></a>            Age <span class="sc">+</span> </span>
-<span id="cb14-5"><a href="#cb14-5"></a>            Meal <span class="sc">+</span> </span>
-<span id="cb14-6"><a href="#cb14-6"></a>            Day, </span>
-<span id="cb14-7"><a href="#cb14-7"></a>      <span class="at">data =</span> tips)</span>
-<span id="cb14-8"><a href="#cb14-8"></a></span>
-<span id="cb14-9"><a href="#cb14-9"></a><span class="fu">glance</span>(tip_fit_2) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-10"><a href="#cb14-10"></a>  <span class="fu">select</span>(AIC, BIC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>tip_fit_2 <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">fit</span>(Tip <span class="sc">~</span> Party <span class="sc">+</span> </span>
+<span id="cb18-4"><a href="#cb18-4"></a>            Age <span class="sc">+</span> </span>
+<span id="cb18-5"><a href="#cb18-5"></a>            Meal <span class="sc">+</span> </span>
+<span id="cb18-6"><a href="#cb18-6"></a>            Day, </span>
+<span id="cb18-7"><a href="#cb18-7"></a>      <span class="at">data =</span> tips)</span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a><span class="fu">glance</span>(tip_fit_2) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-10"><a href="#cb18-10"></a>  <span class="fu">select</span>(AIC, BIC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
     AIC   BIC

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STA 210 - Spring 2022 - AE 12: Exam 3 Review</title>
+<title>DHM - Spring 2022 - AE 12: Exam 3 Review</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,13 +125,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="STA 210 - Spring 2022 - AE 12: Exam 3 Review">
+<meta property="og:title" content="DHM - Spring 2022 - AE 12: Exam 3 Review">
 <meta property="og:description" content="Let’s extend the model to use force and height to predict the species (Hn, Cp, and Lb). The model output is below:">
-<meta property="og:site-name" content="STA 210 - Spring 2022">
-<meta name="twitter:title" content="STA 210 - Spring 2022 - AE 12: Exam 3 Review">
+<meta property="og:site-name" content="DHM - Spring 2022">
+<meta name="twitter:title" content="DHM - Spring 2022 - AE 12: Exam 3 Review">
 <meta name="twitter:description" content="Let’s extend the model to use force and height to predict the species (Hn, Cp, and Lb). The model output is below:">
-<meta name="twitter:image" content="https://sta210-s22.github.io/website/images\twitter-card.png">
-<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:image" content="https://bovi-analytics.github.io/DairyHealthManagment/images\twitter-card.png">
+<meta name="twitter:creator" content="@MielHostens">
 <meta name="twitter:image-height" content="418">
 <meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
@@ -159,7 +159,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/sta210-s22" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/Bovi-analytics/" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="sidebar-tool px-1"><i class="bi bi-code-square"></i></a>
     <a href="" title="Sakai" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
@@ -431,7 +431,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#checking-for-multicollinearity-in-logistic-and-multinomial-logistic" id="toc-checking-for-multicollinearity-in-logistic-and-multinomial-logistic" class="nav-link" data-scroll-target="#checking-for-multicollinearity-in-logistic-and-multinomial-logistic">Checking for multicollinearity in logistic and multinomial logistic</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta210-s22/website/edit/main/ae/ae-12-exam-3-review.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta210-s22/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Bovi-analytics/DairyHealthManagment/edit/main/ae/ae-12-exam-3-review.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Bovi-analytics/DairyHealthManagment/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -471,7 +471,124 @@ Important
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of packages for session</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>.packages <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>,<span class="st">"tidymodels"</span>, <span class="st">"knitr"</span>, <span class="st">"Stat2Data"</span>, <span class="st">"rms"</span>, <span class="st">"nnet"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Install CRAN packages (if not already installed)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>.inst <span class="ot">&lt;-</span> .packages <span class="sc">%in%</span> <span class="fu">installed.packages</span>()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">length</span>(.packages[<span class="sc">!</span>.inst]) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">install.packages</span>(.packages[<span class="sc">!</span>.inst])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/rms_6.6-0.zip' ...
+    OK [downloaded 2.1 Mb in 0.5 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/quantreg_5.95.zip' ...
+    OK [downloaded 1.6 Mb in 0.6 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/MatrixModels_0.5-1.zip' ...
+    OK [downloaded 416.1 Kb in 0.4 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/polspline_1.1.22.zip' ...
+    OK [downloaded 582.3 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/multcomp_1.4-23.zip' ...
+    OK [downloaded 727.3 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/sandwich_3.0-2.zip' ...
+    OK [downloaded 1.4 Mb in 0.4 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/zoo_1.8-12.zip' ...
+    OK [downloaded 997.4 Kb in 0.5 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/mvtnorm_1.1-3.zip' ...
+    OK [file is up to date]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/TH.data_1.1-2.zip' ...
+    OK [downloaded 8.4 Mb in 1.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/htmlTable_2.4.1.zip' ...
+    OK [downloaded 418 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/checkmate_2.2.0.zip' ...
+    OK [downloaded 731.2 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/kableExtra_1.3.4.zip' ...
+    OK [file is up to date]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/webshot_0.5.4.zip' ...
+    OK [downloaded 211.4 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/svglite_2.1.1.zip' ...
+    OK [downloaded 651.7 Kb in 0.3 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/Hmisc_5.0-1.zip' ...
+    OK [downloaded 3.3 Mb in 0.7 secs]
+Retrieving 'https://cran.rstudio.com/src/contrib/viridis_0.6.3.tar.gz' ...
+    OK [downloaded 2.9 Mb in 0.7 secs]
+Retrieving 'https://cran.rstudio.com/bin/windows/contrib/4.2/Formula_1.2-5.zip' ...
+    OK [downloaded 157 Kb in 0.2 secs]
+Installing Stat2Data [2.0.0] ...
+    OK [linked cache]
+Installing MatrixModels [0.5-1] ...
+    OK [installed binary]
+Moving MatrixModels [0.5-1] into the cache ...
+    OK [moved to cache in 13 milliseconds]
+Installing SparseM [1.81] ...
+    OK [linked cache]
+Installing quantreg [5.95] ...
+    OK [installed binary]
+Moving quantreg [5.95] into the cache ...
+    OK [moved to cache in 13 milliseconds]
+Installing polspline [1.1.22] ...
+    OK [installed binary]
+Moving polspline [1.1.22] into the cache ...
+    OK [moved to cache in 13 milliseconds]
+Installing zoo [1.8-12] ...
+    OK [installed binary]
+Moving zoo [1.8-12] into the cache ...
+    OK [moved to cache in 13 milliseconds]
+Installing sandwich [3.0-2] ...
+    OK [installed binary]
+Moving sandwich [3.0-2] into the cache ...
+    OK [moved to cache in 31 milliseconds]
+Installing mvtnorm [1.1-3] ...
+    OK [installed binary]
+Moving mvtnorm [1.1-3] into the cache ...
+    OK [moved to cache in 24 milliseconds]
+Installing TH.data [1.1-2] ...
+    OK [installed binary]
+Moving TH.data [1.1-2] into the cache ...
+    OK [moved to cache in 24 milliseconds]
+Installing multcomp [1.4-23] ...
+    OK [installed binary]
+Moving multcomp [1.4-23] into the cache ...
+    OK [moved to cache in 13 milliseconds]
+Installing checkmate [2.2.0] ...
+    OK [installed binary]
+Moving checkmate [2.2.0] into the cache ...
+    OK [moved to cache in 26 milliseconds]
+Installing htmlTable [2.4.1] ...
+    OK [installed binary]
+Moving htmlTable [2.4.1] into the cache ...
+    OK [moved to cache in 17 milliseconds]
+Installing webshot [0.5.4] ...
+    OK [installed binary]
+Moving webshot [0.5.4] into the cache ...
+    OK [moved to cache in 30 milliseconds]
+Installing svglite [2.1.1] ...
+    OK [installed binary]
+Moving svglite [2.1.1] into the cache ...
+    OK [moved to cache in 9 milliseconds]
+Installing kableExtra [1.3.4] ...
+    OK [installed binary]
+Moving kableExtra [1.3.4] into the cache ...
+    OK [moved to cache in 35 milliseconds]
+Installing gridExtra [2.3] ...
+    OK [linked cache]
+Installing viridis [0.6.3] ...
+    OK [built from source]
+Moving viridis [0.6.3] into the cache ...
+    OK [moved to cache in 22 milliseconds]
+Installing Formula [1.2-5] ...
+    OK [installed binary]
+Moving Formula [1.2-5] into the cache ...
+    OK [moved to cache in 22 milliseconds]
+Installing Hmisc [5.0-1] ...
+    OK [installed binary]
+Moving Hmisc [5.0-1] into the cache ...
+    OK [moved to cache in 23 milliseconds]
+Installing rms [6.6-0] ...
+    OK [installed binary]
+Moving rms [6.6-0] into the cache ...
+    OK [moved to cache in 22 milliseconds]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages into session </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(.packages, require, <span class="at">character.only=</span><span class="cn">TRUE</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'tidyverse' was built under R version 4.2.3</code></pre>
 </div>
@@ -502,7 +619,6 @@ Important
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'lubridate' was built under R version 4.2.3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'tidymodels' was built under R version 4.2.3</code></pre>
 </div>
@@ -542,19 +658,34 @@ Important
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'yardstick' was built under R version 4.2.3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'knitr' was built under R version 4.2.3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Stat2Data)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'rms' was built under R version 4.2.3</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'Hmisc' was built under R version 4.2.3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] TRUE
+
+[[2]]
+[1] TRUE
+
+[[3]]
+[1] TRUE
+
+[[4]]
+[1] TRUE
+
+[[5]]
+[1] TRUE
+
+[[6]]
+[1] TRUE</code></pre>
+</div>
 </div>
 </section>
 <section id="data" class="level2">
@@ -562,7 +693,7 @@ Important
 <p>As part of a study of the effects of predatory intertidal crab species on snail populations, researchers measured the mean closing forces and the propodus heights of the claws on several crabs of three species.</p>
 <p><img src="images/paste-7BA685C6.png" class="img-fluid" width="300"></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>claws <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"ae"</span>, <span class="st">"data/claws.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>claws <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"ae"</span>, <span class="st">"data/claws.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We will use the following variables:</p>
 <ul>
@@ -577,13 +708,13 @@ Important
 </ul>
 <p>Before we get started, let’s make the categorical and indicator variables factors.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>claws <span class="ot">&lt;-</span> claws <span class="sc">%&gt;%</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">species =</span> <span class="fu">as_factor</span>(species),</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">lb =</span> <span class="fu">as_factor</span>(lb),</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">hn =</span> <span class="fu">as_factor</span>(hn),</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cp =</span> <span class="fu">as_factor</span>(cp)</span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>claws <span class="ot">&lt;-</span> claws <span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">species =</span> <span class="fu">as_factor</span>(species),</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">lb =</span> <span class="fu">as_factor</span>(lb),</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">hn =</span> <span class="fu">as_factor</span>(hn),</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cp =</span> <span class="fu">as_factor</span>(cp)</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div style="page-break-after: always;"></div>
 </section>
@@ -607,8 +738,8 @@ Important
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
 <p>Suppose we want to use force to determine whether or not a crab is from the Lophopanopeus bellus (Lb) species. Why should we use a logistic regression model for this analysis?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>claws <span class="sc">%&gt;%</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(lb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>claws <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(lb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 1
   lb   
@@ -669,7 +800,7 @@ Important
 <h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
 <p>Interpret the intercept in the context of the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>mean_force <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(claws<span class="sc">$</span>force), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>mean_force <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(claws<span class="sc">$</span>force), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For crabs with average closing force (12.13 newtons), we expect odds of the crab being <em>Lophopanopeus bellus</em> is 0.45 (<code>exp(-0.798)</code>).</p>
 </section>
@@ -683,11 +814,11 @@ Important
 <h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
 <p>Now let’s consider adding <code>height_cent</code> to the model. Fit the model that includes <code>height_cent</code>. Then use AIC to choose the model that best fits the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>lb_fit_2 <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(lb <span class="sc">~</span> force_cent <span class="sc">+</span> height_cent, <span class="at">data =</span> claws)</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(lb_fit_2, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>lb_fit_2 <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(lb <span class="sc">~</span> force_cent <span class="sc">+</span> height_cent, <span class="at">data =</span> claws)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(lb_fit_2, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 7
   term        estimate std.error statistic p.value conf.low conf.high
@@ -696,11 +827,11 @@ Important
 2 force_cent     0.211    0.0925      2.28  0.0227   0.0563     0.424
 3 height_cent   -0.895    0.398      -2.25  0.0245  -1.82      -0.234</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(lb_fit_1)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(lb_fit_1)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 50.19535</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(lb_fit_2)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(lb_fit_2)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 44.11812</code></pre>
 </div>
@@ -752,13 +883,13 @@ Important
 <h1>Part 2</h1>
 <p>Let’s extend the model to use force and height to predict the species (Hn, Cp, and Lb). The model output is below:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>species_fit <span class="ot">&lt;-</span> <span class="fu">multinom_reg</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"nnet"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(species <span class="sc">~</span> force_cent <span class="sc">+</span> height_cent, <span class="at">data =</span> claws)</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>species_fit <span class="ot">&lt;-</span> <span class="fu">repair_call</span>(species_fit, <span class="at">data =</span> claws)</span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(species_fit, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>species_fit <span class="ot">&lt;-</span> <span class="fu">multinom_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"nnet"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(species <span class="sc">~</span> force_cent <span class="sc">+</span> height_cent, <span class="at">data =</span> claws)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>species_fit <span class="ot">&lt;-</span> <span class="fu">repair_call</span>(species_fit, <span class="at">data =</span> claws)</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(species_fit, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 8
   y.level term        estimate std.error statistic p.value conf.low conf.high
@@ -799,8 +930,8 @@ Important
 <li>Linearity:</li>
 </ul>
 <div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">emplogitplot1</span>(lb <span class="sc">~</span> force, <span class="at">data =</span> claws, <span class="at">ngroups =</span> <span class="dv">10</span>)</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">emplogitplot1</span>(lb <span class="sc">~</span> height, <span class="at">data =</span> claws, <span class="at">ngroups =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">emplogitplot1</span>(lb <span class="sc">~</span> force, <span class="at">data =</span> claws, <span class="at">ngroups =</span> <span class="dv">10</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">emplogitplot1</span>(lb <span class="sc">~</span> height, <span class="at">data =</span> claws, <span class="at">ngroups =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -813,13 +944,13 @@ Important
 </div>
 </div>
 <div>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here for other species here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here for other species here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell quarto-layout-panel">
 
 </div>
 </div>
 <div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here for other species here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here for other species here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell quarto-layout-panel">
 
 </div>
@@ -1101,8 +1232,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2022, Mine Çetinkaya-Rundel</div>   
-    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+    <div class="nav-footer-left">© Copyright 2023, Miel Hostens</div>   
+    <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
 
