@@ -1,7 +1,39 @@
 ---
-title: "STA 210: Regression Analysis"
+title: "Dairy Health Management 2024"
 ---
 
-Learn approaches for analyzing multivariate data sets, emphasizing analysis of variance, linear regression, and logistic regression. Learn techniques for checking the appropriateness of proposed models, such as residual analyses and case influence diagnostics, and techniques for selecting models. Gain experience dealing with the challenges that arise in practice through assignments that utilize real-world data. This class emphasizes data analysis over mathematical theory.
+The learning objectives of this course are listed underneath the picture. These learning goals will be reached using iteratively using the [double diamond](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)) approach as illustrated for any dairy process in the picture underneath. The double diamond will be iteratively used throughout the course.
 
-![](images/background-bikeshare.png){fig-alt="A series of six, generic data visualizations: a scatterplot, a density plot, a contour plot, a line plot, a box plot, and another scatterplot." width="700"}
+![](images/DoubleDiamond.png){fig-alt="An illustration on the double diamond" width="1250"}
+
+# Learning objectives
+
+1.  The student is able to recognize relevant deviations from the normal picture and to link this to pathophysiological processes and diseases of the organ systems.
+
+2.  The student is able to systematically communicate his findings obtained through anamnesis, key figures and clinical research.
+
+3.  The student is able to use the right additional diagnostics based on knowledge of pathological processes, immunological principles and knowledge of new diagnostic techniques (Precision Livestock Farming).
+
+4.  The student knows how to diagnose the common disorders at individual and couple level and to advise the cattle farmer, both curatively and preventively.
+
+5.  The student has insight into the business processes (management, nutrition, breeding, housing and climate, biosecurity, infection prevention, economy) on a cattle farm, and the effects of this on animal health, animal welfare and products and product quality, also in relation to the requirements of the customers (incl. society).
+
+6.  The student acquires insight into the data in the field of animal health, animal welfare, production and product quality that are available on a cattle farm, how these are recorded, and what the meaning and coherence of this is.
+
+7.  The student can deal with the collection and analysis of data and draw conclusions from this for the business operations on the cattle farm.
+
+8.  The student knows how to place the cattle farm among the other stakeholders in the sector.
+
+9.  The student knows the public and private regulations that affect the work of the veterinarian on cattle farms.
+
+10. The student knows what the earnings model of livestock farmers looks like, and can name and calculate the economic consequences of an animal disease and/or change in business operations.
+
+11. The student knows how to make a strength and weakness analysis of a cattle farm and knows how to prioritize risk factors.
+
+12. The student works evidence-based in all his work.
+
+13. The student knows how a cattle farm can produce sustainably and is aware of the future challenges of the sector.
+
+14. The student can create a strategic health plan.
+
+15. The student is able to assess animal welfare and can give advice at farm level to safeguard and improve the welfare of animals.
