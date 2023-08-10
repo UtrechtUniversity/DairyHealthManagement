@@ -3,7 +3,7 @@ project:
 
 website:
   page-navigation: true
-  title: "DHM - Spring 2022"
+  title: "DHM"
   description: "Homepage for Dairy Health Management"
   site-url: "https://bovi-analytics.github.io/DairyHealthManagment/"
 
@@ -23,7 +23,7 @@ website:
 
   sidebar:
     background: "#FFCD00"
-    logo: "images/logo.png"
+    logo: "images/UtrechtUniversityLogo.png"
     pinned: true
     align: center
     tools:
