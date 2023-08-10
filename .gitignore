@@ -5,11 +5,13 @@ lock/
 python/
 staging/
 .Rproj.user
+.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
-
-/.quarto/
-_site/
+.quarto/
+.quarto/**
+_freeze/**
+_site/**
 *.key
 *speaker.html
