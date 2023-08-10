@@ -15,19 +15,43 @@ title: "Syllabus"
 
 ## Learning objectives
 
-By the end of the semester, you will be able to...
+By the end of the 5 weeks, ...
 
--   analyze real-world data to answer questions about multivariable relationships.
--   fit and evaluate linear and logistic regression models.
--   assess whether a proposed model is appropriate and describe its limitations.
--   use Quarto to write reproducible reports and GitHub for version control and collaboration.
--   communicate results from statistical analyses to a general audience.
+1.  The student is able to recognize relevant deviations from the normal picture and to link this to pathophysiological processes and diseases of the organ systems.
+
+2.  The student is able to systematically communicate his findings obtained through anamnesis, key figures and clinical research.
+
+3.  The student is able to use the right additional diagnostics based on knowledge of pathological processes, immunological principles and knowledge of new diagnostic techniques (Precision Livestock Farming).
+
+4.  The student knows how to diagnose the common disorders at individual and couple level and to advise the cattle farmer, both curatively and preventively.
+
+5.  The student has insight into the business processes (management, nutrition, breeding, housing and climate, biosecurity, infection prevention, economy) on a cattle farm, and the effects of this on animal health, animal welfare and products and product quality, also in relation to the requirements of the customers (incl. society).
+
+6.  The student acquires insight into the data in the field of animal health, animal welfare, production and product quality that are available on a cattle farm, how these are recorded, and what the meaning and coherence of this is.
+
+7.  The student can deal with the collection and analysis of data and draw conclusions from this for the business operations on the cattle farm.
+
+8.  The student knows how to place the cattle farm among the other stakeholders in the sector.
+
+9.  The student knows the public and private regulations that affect the work of the veterinarian on cattle farms.
+
+10. The student knows what the earnings model of livestock farmers looks like, and can name and calculate the economic consequences of an animal disease and/or change in business operations.
+
+11. The student knows how to make a strength and weakness analysis of a cattle farm and knows how to prioritize risk factors.
+
+12. The student works evidence-based in all his work.
+
+13. The student knows how a cattle farm can produce sustainably and is aware of the future challenges of the sector.
+
+14. The student can create a strategic health plan.
+
+15. The student is able to assess animal welfare and can give advice at farm level to safeguard and improve the welfare of animals.
 
 ## Community
 
-### Duke Community Standard
+### Utrecht Community Standard
 
-As a student in this course, you have agreed to uphold the [Duke Community Standard](https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard) as well as the practices specific to this course.
+As a student in this course, you have agreed to uphold the XXX as well as the practices specific to this course.
 
 ```{=html}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -123,33 +147,16 @@ The purpose of the [project](/project-description/) is to apply what you've lear
 
 The final course grade will be calculated as follows:
 
-| Category              | Percentage      |
-|-----------------------|-----------------|
-| Application exercises | 3%              |
-| Homework              | 35% (7% x 5)    |
-| Project               | 15%             |
-| Lab                   | 14% (2.33% x 6) |
-| Exam 01               | 10%             |
-| Exam 02               | 10%             |
-| Exam 03               | 10%             |
-| Teamwork              | 3%              |
-
-The final letter grade will be determined based on the following thresholds:
-
-| Letter Grade | Final Course Grade |
-|--------------|--------------------|
-| A            | \>= 93             |
-| A-           | 90 - 92.99         |
-| B+           | 87 - 89.99         |
-| B            | 83 - 86.99         |
-| B-           | 80 - 82.99         |
-| C+           | 77 - 79.99         |
-| C            | 73 - 76.99         |
-| C-           | 70 - 72.99         |
-| D+           | 67 - 69.99         |
-| D            | 63 - 66.99         |
-| D-           | 60 - 62.99         |
-| F            | \< 60              |
+| Category | Percentage |
+|----------|------------|
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
 
 ## Five tips for success
 
