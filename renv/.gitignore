@@ -1,6 +1,6 @@
 sandbox/
 cellar/
-library/
+library/**
 local/
 lock/
 python/
