@@ -11,9 +11,12 @@ staging/
 .Ruserdata
 .quarto/
 .quarto/**
+R/
+R/**
 _freeze/
 _freeze/**
 _site/
 _site/**
 *.key
 *speaker.html
+/.quarto/
