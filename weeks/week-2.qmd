@@ -1,33 +1,50 @@
 ---
-title: "Week 1"
-subtitle: "Welcome to STA 210"
+title: "Week 2"
+subtitle: "Transition management"
 editor: visual
 ---
 
-::: callout-important
-Classes are virtual this week.
-Find Zoom links [here](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/d5eef508-07a4-4c6d-b7bd-4614a9631562 "Sakai - Zoom meetings").
-:::
+## Introduction 
+
+Dairy cow transition management involves a strategic approach to ensure smooth physiological and metabolic shifts during the prepartum and postpartum periods. Focused on optimizing health and milk production, it encompasses dietary adjustments, stress reduction, and monitoring to prevent issues like metabolic disorders and reduced fertility. Balancing nutrition, minimizing environmental stress, and offering appropriate evidence based veterinary care aids in the successful transition from late pregnancy to early lactation, benefiting both cow welfare and farm profitability. Effective transition management enhances milk yield, reproductive efficiency, and overall herd well-being in the critical phase of a dairy cow's lifecycle.
+
+### Learning goals
+
+1.  a
+
+2.  b
+
+3.  c
 
 ## Prepare
 
-📖 Read the [syllabus](/course-syllabus.html)
+📖 Read the [symposium review](https://doi.org/10.3168/jds.2019-17271) article on *Nutritional strategies to improve health, production and fertility.*
 
-📖 Read the [support](/course-support.html) resources
+📖 Read the [review article](https://doi.org/10.1016/j.cvfa.2004.06.011) on *Behavioral needs of the transition cow and considerations for special needs facility design*.
+
+📖 Read the [award article](https://doi.org/10.3168/jds.2022-23194) on *What makes for a good life for transition dairy cows?*
 
 ## Participate
 
-🖥️ [Lab 0 -](/_slides/lab-0.html)[Meet](/slides/lab-0.html)[+ greet](/_slides/lab-0.html)
+🖥️ [Meet the transition experts 1](/slides/lec-1.html)
 
-🖥️ [Lecture 1 - Welcome to STA 210](/slides/lec-1.html)
+🖥️ [Feed'n practice lab 2](/_slides/lab-0.html)
+
+🖥️ [Meet the transition experts 2](/slides/lec-1.html)
 
 ## Practice
 
-📋 [AE 0 - Movies](/ae/ae-0-movies.html)
+📋 [AE 2 - Evaluate your transition management strategy](/ae/ae-0-movies.html)
 
 ## Perform
 
-⌨️ [Lab 0 - Meet + greet](/labs/lab-0.html)
+✅ [Knowledge challenge week 2](https://forms.office.com/e/xw8hTUTctq)
+
+⌨️ [Feed'n practice 2](/labs/lab-2.html)
+
+📂 Present your transition management strategy
+
+✅ [Knowledge assignment week 2](https://forms.office.com/e/xw8hTUTctq)
 
 <br><br>
 
