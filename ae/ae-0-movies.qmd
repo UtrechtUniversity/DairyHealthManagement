@@ -96,4 +96,3 @@ movies %>%
 ## Appendix
 
 Below is a list of genres in the data set:
-

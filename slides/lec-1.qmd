@@ -39,7 +39,7 @@ library(countdown)
 :::
 :::
 
-## Meet the experts
+## Meet the [experts](/course-team.html)
 
 -   Peter Vos
 -   Hilde Aardema
@@ -59,15 +59,7 @@ library(countdown)
 > "Dairy health management is a critical aspect of ensuring the well-being and productivity of dairy cattle while maintaining the quality and safety of milk and dairy products. It encompasses a range of practices aimed at preventing, diagnosing, and treating various health issues that can affect dairy animals."
 :::
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Regression_analysis)
-
-## Course FAQ
-
-::: incremental
--   **What background is assumed for the course?** Definitely the *Sustainable Animal Production Chains* course.
--   **Will we be doing practical things ?** Yes. You will be assigned one farm which will be used throughtout the course. You are assumed to visit this farm regularly.
--   **Will we learn the theory or practical dairy health management?** Hopefully BOTH. The course is mainly intended to build on existing knowledge acquired during the bachelor courses. The theoretical background will be activated with theoretical courses, meet the experts and hands-on labs.
-:::
+# Course learning goals and philosophy
 
 ## Course learning objectives (part 1)
 
@@ -95,13 +87,31 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Regression_analysis)
 -   Week 5 - Mastitis & claw health management
 :::
 
+## Double diamond principle
+
+-   These learning objectives will be activated through weekly iterations of the [double diamond](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)) approach as illustrated for any dairy process in the next slide.
+
+-   The double diamond principle will be used throughout the course, and will hopefully help you to understand more complex future (herd health management) issues you encounter in your future work.
+
+## Double diamond principle
+
+![Source: [Wikipedia](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model))](images/lec-1/DoubleDiamond.png){width="451"}
+
+## Course FAQ
+
+::: incremental
+-   **What background is assumed for the course?** Definitely the *Sustainable Animal Production Chains* course.
+-   **Will we be doing practical things ?** Yes. You will be assigned one farm which will be used throughtout the course. You are assumed to visit this farm regularly.
+-   **Will we learn the theory or practical dairy health management?** Hopefully BOTH. The course is mainly intended to build on existing knowledge acquired during the bachelor courses. The theoretical background will be activated with theoretical courses, meet the experts and hands-on labs.
+:::
+
 # Course overview
 
 ## Homepage
 
 [https://github.com/Bovi-analytics/DairyHealthManagement](https://bovi-analytics.github.io/DairyHealthManagement/)
 
--   All course materials
+-   All relevant course materials (and history)
 -   Links to Teams, GitHub, Feed'n practice, etc.
 -   Let's take a tour!
 
@@ -116,7 +126,7 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Regression_analysis)
     -   Farm peer-presentations (teams)
     -   Knowledge exams x 5 (individual)
 
-## Recurrent week pattern
+## Recurring weekly pattern
 
 ::: incremental
 -   **Knowledge challenge:** Each Monday starts with a knowledge challenge. This is not an official exam but will hopefully challenge on gaps in your current knowledge.
@@ -129,7 +139,7 @@ Source: [Wikipedia](https://en.wikipedia.org/wiki/Regression_analysis)
 ## Teams
 
 -   Team assignments
-    -   Assigned by me
+    -   Assigned by us
     -   Application exercises, labs, and project
     -   Peer evaluation during teamwork and after completion
 -   Expectations and roles
@@ -154,7 +164,7 @@ See [course syllabus](https://sta210-s22.github.io/website/course-syllabus.html)
 
 ## Announcements
 
--   Posted on Blackboard (Announcements tool) and sent via email, be sure to check both regularly
+-   Posted on [Blackboard](https://uu.blackboard.com/) (Announcements tool) and sent via email, be sure to check both regularly
 -   I'll assume that you've read an announcement by the next "business" day
 
 ## Diversity + inclusion {.smaller}
@@ -167,6 +177,32 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 -   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
 -   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by me or anyone) that made you feel uncomfortable, please talk to me about it.
 :::
+
+# Double Diamond Farms
+
+## Discover, Define, Develop, Deliver
+
+To maximize knowledge activation, a real dairy farm will be put at your team's disposal during this DHM course.
+
+These farms have committed to activally participate:
+
+-   Allow farm visits (max n= TBD) to discover how specific aspects on the farm are managed (eg milking procedure).
+
+-   Share current and historical information on management aspects such as:
+
+    -   Management data
+
+    -   Milk recordings
+
+    -   Nutritition
+
+    -   Genetics
+
+    -   Laboratory results and disease status
+
+## Deliver
+
+At the end of the week, your team is expected to present your farm's approach towards that weeks health topic to your peers using the acquired knowledge.
 
 # Course policies
 
@@ -198,6 +234,22 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 > -   I will conduct myself honorably in all my endeavors; and
 >
 > -   I will act if the Code is compromised.
+
+## Farm data
+
+-   Be aware that
+
+    -   the participating dairy farmers are sharing sometimes sensitive and personal data with you.
+
+    -   you are supposed to use that data for educational purposes only.
+
+    -   your professional conduct is expected.
+
+-   Misuse of the data
+
+    -   will be punished.
+
+    -   influences future participation of the collaborating farms.
 
 ## Most importantly!
 

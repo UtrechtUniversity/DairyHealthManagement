@@ -4,7 +4,7 @@ subtitle: "Transition management"
 editor: visual
 ---
 
-## Introduction 
+## Introduction
 
 Dairy cow transition management involves a strategic approach to ensure smooth physiological and metabolic shifts during the prepartum and postpartum periods. Focused on optimizing health and milk production, it encompasses dietary adjustments, stress reduction, and monitoring to prevent issues like metabolic disorders and reduced fertility. Balancing nutrition, minimizing environmental stress, and offering appropriate evidence based veterinary care aids in the successful transition from late pregnancy to early lactation, benefiting both cow welfare and farm profitability. Effective transition management enhances milk yield, reproductive efficiency, and overall herd well-being in the critical phase of a dairy cow's lifecycle.
 

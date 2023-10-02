@@ -1,12 +1,12 @@
-# Website for Dairy Health Management at Utrecht University 
+# Website for Dairy Health Management at Utrecht University
 
-🔗 https://sta210-s22.github.io/website/
+🔗 https://bovi-analytics.github.io/DairyHealthManagement/
 
-## After updating R 
+## After updating R
 
 [Source](https://inbo.github.io/tutorials/tutorials/r_renv_update/)
 
-``` R
+``` r
 renv::upgrade() # upgrades renv, if new version is available 
 renv::hydrate(update = "all") 
 renv::snapshot() # inspect the message before confirming to overwrite renv.lock
@@ -14,7 +14,7 @@ renv::snapshot() # inspect the message before confirming to overwrite renv.lock
 
 ## Attribution
 
-Much of the content is based on [STA 210 - Fall 2021](https://github.com/sta210-fa21/) by Dr. Maria Tackett.
+Much of the content is based on [Dairy Health Management](https://github.com/Bovi-analytics/DairyHealthManagement) by Dr. Miel Hostens.
 
 <hr>
 
