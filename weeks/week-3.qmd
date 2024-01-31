@@ -1,13 +1,37 @@
 ---
-title: "Week 1"
-subtitle: "Welcome to STA 210"
+title: "Reproduction management"
+subtitle: "Week 3"
 editor: visual
 ---
 
-::: callout-important
-Classes are virtual this week.
-Find Zoom links [here](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/d5eef508-07a4-4c6d-b7bd-4614a9631562 "Sakai - Zoom meetings").
-:::
+# Introduction
+
+Dairy cow reproduction management involves ...
+
+## Learning goals
+
+1.  ...
+
+## Topics covered
+
+-   ...
+
+## Knowledge challenge
+
+Finish the [knowledge challenge for week 3](https://forms.office.com/e/PpVW2HdWKx) before the start of the first lecture.
+
+# Schedule
+
+|             |       Monday        | Tuesday | Wednesday | Thursday | Friday |
+|-------------|:-------------------:|:--------|-----------|:--------:|:------:|
+| 9:00-9:45   | Knowledge challenge |         |           |          |        |
+| 10:00-10:45 |                     |         |           |          |        |
+| 11:00-11:45 |                     |         |           |          |        |
+| 12:00-12:45 |                     |         |           |          |        |
+| 13:15-14:00 |                     |         |           |          |        |
+| 14:15-15:00 |                     |         |           |          |        |
+| 15:15-16:00 |                     |         |           |          |        |
+| 16:15-17:00 |                     |         |           |          |        |
 
 ## Prepare
 

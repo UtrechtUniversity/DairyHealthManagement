@@ -6,49 +6,529 @@ tbl-colwidths: [5,5,15,5,5,5,5,5,5,5]
 This page contains an outline of the topics, content, and assignments for the course. Note that this schedule will be updated as the course progresses, with all changes documented here.
 
 ::: column-screen-inset-right
-|          Week           | Date           | Topic                                   |             Prepare              |                  Slides                   |                           AE                           | Feed'n practice |                     MC                      | Project |
-|:-----------------------:|:---------------|-----------------------------------------|:--------------------------------:|:-----------------------------------------:|:------------------------------------------------------:|:---------------:|:-------------------------------------------:|:-------:|
-| [1](/weeks/week-1.html) | Mon, 9-10h     | Welcome to DHM                          |                📖                |   [🖥️](/slides/lab-0.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Mon, 10-11h    | Knowledge challenge                     |                                  |                                           |                                                        |                 |                     ✅                      |         |
-|                         | Mon, 11-12h    | Youngstock MGMT                         |                                  |                                           |                                                        |                 |                                             |         |
-|                         | Mon, 13-15h    | MTE 1 - Meet the youngstock experts     | [📖](/weeks/week-1.html#prepare) |   [🖥️](/slides/lab-1.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Tue, 13-15h    | Feed'n practice                         |                📖                | [🖥️](/slides/lec-2.html "Lecture slides") | [📋](/ae/ae-1-dcbikeshare.html "Application exercise") |       💻        |                                             |         |
-|                         | Wed, 13-15h    | MTE 2 - Meet the youngstock experts     |                📖                | [🖥️](/slides/lec-3.html "Lecture slides") |                                                        |                 |                                             |         |
-|                         | Fri, 9-12h     | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Fri, 13-15h    | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Friday, 15-16h | Knowledge check                         |                                  |                                           |                                                        |                 |                     ✅                      |         |
-| [2](/weeks/week-2.html) | Mon, 9-10h     | Knowledge challenge                     |                                  |                                           |                                                        |                 | [✅](https://forms.office.com/e/xw8hTUTctq) |         |
-|                         | Mon, 10-12h    | Transition MGMT                         |                📖                |   [🖥️](/slides/lab-0.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Mon, 13-15h    | MTE 1 - Meet the transition experts     | [📖](/weeks/week-1.html#prepare) |   [🖥️](/slides/lab-1.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Tue, 13-15h    | Feed'n practice                         |                📖                | [🖥️](/slides/lec-2.html "Lecture slides") | [📋](/ae/ae-1-dcbikeshare.html "Application exercise") |       💻        |                                             |         |
-|                         | Wed, 13-15h    | MTE 2 - Meet the transition experts     |                📖                | [🖥️](/slides/lec-3.html "Lecture slides") |                                                        |                 |                                             |         |
-|                         | Fri, 9-12h     | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Fri, 13-15h    | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Friday, 15-16h | Knowledge check                         |                                  |                                           |                                                        |                 |                     ✅                      |         |
-| [3](/weeks/week-3.html) | Mon, 9-10h     | Knowledge challenge                     |                                  |                                           |                                                        |                 |                                             |   ✅    |
-|                         | Mon, 10-12h    | Reproductive MGMT                       |                📖                |   [🖥️](/slides/lab-0.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Mon, 13-15h    | MTE 1 - Meet the reproduction experts   | [📖](/weeks/week-1.html#prepare) |   [🖥️](/slides/lab-1.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Tue, 13-15h    | Feed'n practice                         |                📖                | [🖥️](/slides/lec-2.html "Lecture slides") | [📋](/ae/ae-1-dcbikeshare.html "Application exercise") |       💻        |                                             |         |
-|                         | Wed, 13-15h    | MTE 2 - Meet the reproduction experts   |                📖                | [🖥️](/slides/lec-3.html "Lecture slides") |                                                        |                 |                                             |         |
-|                         | Fri, 9-12h     | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Fri, 13-15h    | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Friday, 15-16h | Knowledge check                         |                                  |                                           |                                                        |                 |                     ✅                      |         |
-| [4](/weeks/week-4.html) | Mon, 9-10h     | Knowledge challenge                     |                                  |                                           |                                                        |                 |                                             |   ✅    |
-|                         | Mon, 10-12h    | Infectious disease MGMT                 |                📖                |   [🖥️](/slides/lab-0.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Mon, 13-15h    | MTE 1 - Meet the bovine disease experts | [📖](/weeks/week-1.html#prepare) |   [🖥️](/slides/lab-1.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Tue, 13-15h    | Feed'n practice                         |                📖                | [🖥️](/slides/lec-2.html "Lecture slides") | [📋](/ae/ae-1-dcbikeshare.html "Application exercise") |       💻        |                                             |         |
-|                         | Wed, 13-15h    | MTE 2 - Meet the bovine disease experts |                📖                | [🖥️](/slides/lec-3.html "Lecture slides") |                                                        |                 |                                             |         |
-|                         | Fri, 9-12h     | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Fri, 13-15h    | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Friday, 15-16h | Knowledge check                         |                                  |                                           |                                                        |                 |                     ✅                      |         |
-| [5](/weeks/week-5.html) | Mon, 9-10h     | Knowledge challenge                     |                                  |                                           |                                                        |                 |                                             |   ✅    |
-|                         | Mon, 10-12h    | Udder health & claw MGMT                |                📖                |   [🖥️](/slides/lab-0.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Mon, 13-15h    | MTE 1 - Meet the udder health experts   | [📖](/weeks/week-1.html#prepare) |   [🖥️](/slides/lab-1.html "Lab slides")   |                                                        |                 |                                             |         |
-|                         | Tue, 13-15h    | Feed'n practice                         |                📖                | [🖥️](/slides/lec-2.html "Lecture slides") | [📋](/ae/ae-1-dcbikeshare.html "Application exercise") |       💻        |                                             |         |
-|                         | Wed, 13-15h    | MTE 2 - Meet the claw health experts    |                📖                | [🖥️](/slides/lec-3.html "Lecture slides") |                                                        |                 |                                             |         |
-|                         | Fri, 9-12h     | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Fri, 13-15h    | Peer presentations                      |                                  |                                           |                                                        |                 |                                             |   📂    |
-|                         | Friday, 15-16h | Knowledge check                         |                                  |                                           |                                                        |                 |                     ✅                      |         |
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><p>Week</p></th>
+<th style="text-align: left;"><p>Date</p></th>
+<th><p>Topic</p></th>
+<th style="text-align: center;"><p>Class</p>
+<p>Type</p></th>
+<th style="text-align: center;"><p>Prepare</p></th>
+<th style="text-align: center;"><p>Slides</p></th>
+<th style="text-align: center;"><p>AE</p></th>
+<th style="text-align: center;"><p>Feedn practice</p></th>
+<th style="text-align: center;"><p>MC</p></th>
+<th style="text-align: center;"><p>Project</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><p><a href="/weeks/week-1.html">1 (20-24/5)</a></p></td>
+<td style="text-align: left;"><p>Tue, 9:00-9:45</p></td>
+<td><p>Welcome to DHM</p></td>
+<td style="text-align: center;"><p>IC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 10:00-10:45</p></td>
+<td><p>Knowledge challenge</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>✅</p></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 11:00-12:45</p></td>
+<td><p>Youngstock MGMT</p></td>
+<td style="text-align: center;"><p>HC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
+<td><p>Feedn practice</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-2.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"><p><a href="/ae/ae-1-dcbikeshare.html" title="Application exercise">📋</a></p></td>
+<td style="text-align: center;"><p>💻</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 9:00-10:45</p></td>
+<td><p>MTE 1 - Meet the youngstock experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p><a href="/weeks/week-1.html#prepare">📖</a></p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-1.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 13:15-15:00</p></td>
+<td><p>MTE 2 - Meet the youngstock experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-3.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 17:00</p></td>
+<td><p>Feedn practice deadline</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p><a href="/weeks/week-2.html">2 (27-31/5)</a></p></td>
+<td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
+<td><p>Knowledge challenge</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p><a href="https://forms.office.com/e/xw8hTUTctq">✅</a></p></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
+<td><p>Transition MGMT</p></td>
+<td style="text-align: center;"><p>HC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
+<td><p>MTE 1 - Meet the transition experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p><a href="/weeks/week-1.html#prepare">📖</a></p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-1.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
+<td><p>Feedn practice</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-2.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"><p><a href="/ae/ae-1-dcbikeshare.html" title="Application exercise">📋</a></p></td>
+<td style="text-align: center;"><p>💻</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
+<td><p>MTE 2 - Meet the transition experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-3.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 17:00</p></td>
+<td><p>Feedn practice deadline</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p><a href="/weeks/week-3.html">3 (3-7/6)</a></p></td>
+<td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
+<td><p>Knowledge challenge</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>✅</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
+<td><p>Reproductive MGMT</p></td>
+<td style="text-align: center;"><p>HC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
+<td><p>MTE 1 - Meet the reproduction experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p><a href="/weeks/week-1.html#prepare">📖</a></p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-1.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
+<td><p>Feedn practice</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-2.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"><p><a href="/ae/ae-1-dcbikeshare.html" title="Application exercise">📋</a></p></td>
+<td style="text-align: center;"><p>💻</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
+<td><p>MTE 2 - Meet the reproduction experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-3.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 17:00</p></td>
+<td><p>Feedn practice deadline</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p><a href="/weeks/week-4.html">4 (10-14/6)</a></p></td>
+<td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
+<td><p>Knowledge challenge</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>✅</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
+<td><p>Infectious disease MGMT</p></td>
+<td style="text-align: center;"><p>HC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
+<td><p>MTE 1 - Meet the bovine disease experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p><a href="/weeks/week-1.html#prepare">📖</a></p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-1.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
+<td><p>Feedn practice</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-2.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"><p><a href="/ae/ae-1-dcbikeshare.html" title="Application exercise">📋</a></p></td>
+<td style="text-align: center;"><p>💻</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
+<td><p>MTE 2 - Meet the bovine disease experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-3.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 17:00</p></td>
+<td><p>Feedn practice deadline</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p><a href="/weeks/week-5.html">5 (17-21/6)</a></p></td>
+<td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
+<td><p>Knowledge challenge</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>✅</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
+<td><p>Udder health &amp; claw MGMT</p></td>
+<td style="text-align: center;"><p>HC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
+<td><p>MTE 1 - Meet the udder health experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p><a href="/weeks/week-1.html#prepare">📖</a></p></td>
+<td style="text-align: center;"><p><a href="/slides/lab-1.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
+<td><p>Feedn practice</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-2.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"><p><a href="/ae/ae-1-dcbikeshare.html" title="Application exercise">📋</a></p></td>
+<td style="text-align: center;"><p>💻</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
+<td><p>MTE 2 - Meet the claw health experts</p></td>
+<td style="text-align: center;"><p>IHC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"><p><a href="/slides/lec-3.html" title="Lecture slides">🖥️</a></p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
+<td><p>Peer presentations</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>📂</p></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 15:00-16:45</p></td>
+<td><p>Final assessment</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><p>✅</p></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Fri, 17:00</p></td>
+<td><p>Feedn practice deadline</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 :::
 
 ```{r echo = FALSE}
