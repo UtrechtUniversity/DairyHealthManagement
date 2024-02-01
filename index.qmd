@@ -242,7 +242,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
-<td><p>Reproductive MGMT</p></td>
+<td><p>Reproductive MGMT -Lecture 3.1 - Reproduction physiology: oocyte to calf</p></td>
 <td style="text-align: center;"><p>HC</p></td>
 <td style="text-align: center;"><p>📖</p></td>
 <td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
@@ -254,7 +254,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
-<td><p>MTE 1 - Meet the reproduction experts</p></td>
+<td><p>Lecture MTE 3.2 - Reproductive MGMT on dairy farms</p></td>
 <td style="text-align: center;"><p>IHC</p></td>
 <td style="text-align: center;"><p><a href="/weeks/week-1.html#prepare">📖</a></p></td>
 <td style="text-align: center;"><p><a href="/slides/lab-1.html" title="Lab slides">🖥️</a></p></td>
@@ -277,8 +277,8 @@ This page contains an outline of the topics, content, and assignments for the co
 </tr>
 <tr class="even">
 <td style="text-align: center;"></td>
-<td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
-<td><p>MTE 2 - Meet the reproduction experts</p></td>
+<td style="text-align: left;"><p>Wed, 11:00-12:45</p></td>
+<td><p>MTE 2 - Lecture 3.3 - Effect of metabolic and infectious disease on reproductive success in dairy cows</p></td>
 <td style="text-align: center;"><p>IHC</p></td>
 <td style="text-align: center;"><p>📖</p></td>
 <td style="text-align: center;"><p><a href="/slides/lec-3.html" title="Lecture slides">🖥️</a></p></td>
@@ -288,6 +288,18 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
+<td><p>Wetlab on cycle stage &amp; pregnancy stage recognition</p></td>
+<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>📖</p></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
 <td><p>Peer presentations</p></td>
@@ -299,7 +311,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>📂</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
 <td><p>Peer presentations</p></td>
@@ -311,7 +323,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>📂</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 17:00</p></td>
 <td><p>Feedn practice deadline</p></td>
@@ -323,7 +335,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><p><a href="/weeks/week-4.html">4 (10-14/6)</a></p></td>
 <td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
 <td><p>Knowledge challenge</p></td>
@@ -335,7 +347,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>✅</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
 <td><p>Infectious disease MGMT</p></td>
@@ -347,7 +359,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
 <td><p>MTE 1 - Meet the bovine disease experts</p></td>
@@ -359,7 +371,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
 <td><p>Feedn practice</p></td>
@@ -371,7 +383,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
 <td><p>MTE 2 - Meet the bovine disease experts</p></td>
@@ -383,7 +395,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
 <td><p>Peer presentations</p></td>
@@ -395,7 +407,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>📂</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
 <td><p>Peer presentations</p></td>
@@ -407,7 +419,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>📂</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 17:00</p></td>
 <td><p>Feedn practice deadline</p></td>
@@ -419,7 +431,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><p><a href="/weeks/week-5.html">5 (17-21/6)</a></p></td>
 <td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
 <td><p>Knowledge challenge</p></td>
@@ -431,7 +443,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>✅</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
 <td><p>Udder health &amp; claw MGMT</p></td>
@@ -443,7 +455,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 13:15-15:00</p></td>
 <td><p>MTE 1 - Meet the udder health experts</p></td>
@@ -455,7 +467,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Tue, 13:15-17:00</p></td>
 <td><p>Feedn practice</p></td>
@@ -467,7 +479,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Wed, 13:15-17:00</p></td>
 <td><p>MTE 2 - Meet the claw health experts</p></td>
@@ -479,7 +491,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 9:00-10:45</p></td>
 <td><p>Peer presentations</p></td>
@@ -491,7 +503,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>📂</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 11:00-12:45</p></td>
 <td><p>Peer presentations</p></td>
@@ -503,7 +515,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>📂</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 15:00-16:45</p></td>
 <td><p>Final assessment</p></td>
@@ -515,7 +527,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: center;"><p>✅</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Fri, 17:00</p></td>
 <td><p>Feedn practice deadline</p></td>

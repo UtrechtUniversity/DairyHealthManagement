@@ -4,11 +4,11 @@ subtitle: "Week 2"
 editor: visual
 ---
 
-## Introduction
+# Introduction
 
 Dairy cow transition management involves a strategic approach to ensure smooth physiological and metabolic shifts from the pre-partum to the post-partum period. Focused on optimizing health and milk production, it encompasses dietary adjustments, stress reduction, and monitoring to prevent issues like metabolic disorders and reduced fertility. Balancing nutrition, minimizing environmental stress, and offering appropriate evidence based veterinary care aids in the successful transition from late pregnancy to early lactation, benefiting both cow welfare and farm profitability. Effective transition management enhances milk yield, reproductive efficiency, and overall animal welfare in the critical phase of a dairy cow's life cycle.
 
-### Learning goals
+## Learning goals
 
 1.  The student acquires insight into the management of cows during the transition to lactation (e.g. (patho)-physiology, feeding strategies, housing).
 
@@ -20,11 +20,24 @@ Dairy cow transition management involves a strategic approach to ensure smooth p
 
 5.  The student is able to create an animal health transition monitoring and treatment plan.
 
-### Topics covered
+## Topics covered
 
 -   ...
 
-### Knowledge challenge
+# Schedule
+
+|             |  Monday   |   Tuesday    | Wednesday | Thursday |    Friday    |
+|-------------|:---------:|:------------:|:---------:|:--------:|:------------:|
+| 9:00-9:45   | KC 2 (WC) |              |           |          | PP 2.6 (WC)  |
+| 10:00-10:45 |           |              |           |          | PP 2.6 (WC)  |
+| 11:00-11:45 |  HC 2.1   |              |  IHC 2.4  |          | PP 2.6 (WC)  |
+| 12:00-12:45 |  HC 2.1   |              |  IHC 2.4  |          | PP 2.6 (WC)  |
+| 13:15-14:00 |  MTE 2.2  | FNP 2.3 (WC) |  MTE 2.5  |          |              |
+| 14:15-15:00 |  MTE 2.2  | FNP 2.3 (WC) |  MTE 2.5  |          |              |
+| 15:15-16:00 |           | FNP 2.3 (WC) |           |          |              |
+| 16:15-17:00 |           | FNP 2.3 (WC) |           |          | FNP DEADLINE |
+
+## Knowledge challenge
 
 Finish the [knowledge challenge for week 2](https://forms.office.com/e/PpVW2HdWKx) before the start of the first lecture.
 
@@ -38,27 +51,25 @@ Finish the [knowledge challenge for week 2](https://forms.office.com/e/PpVW2HdWK
 
 ## Participate
 
-🖥️ Transition management lecture
+🖥️ IHC 2.1 - Transition management lecture
 
-🖥️ [Meet the transition experts 1](/slides/lec-1.html)
+🖥️ MTE 2.2 - tbd
 
-🖥️ [Feed'n practice lab 2](/_slides/lab-0.html)
+🖥️ IHC 2.4 - tbd
 
-🖥️ [Meet the transition experts 2](/slides/lec-1.html)
+🖥️ IHC 2.4 - tbd
 
 ## Practice
 
-📋 [AE 2 - Evaluate your transition management strategy](/ae/ae-0-movies.html)
+📋 [Feed'n practice - Evaluate your transition cow feed strategy](/ae/ae-0-movies.html)
 
 ## Perform
 
 ✅ [Knowledge challenge week 2](https://forms.office.com/e/xw8hTUTctq)
 
-⌨️ [Feed'n practice 2](/labs/lab-2.html)
+📂 Present your herd's transition management strategy to your peers
 
-📂 Present your transition management strategy to your peers
-
-✅ [Work on feed'n practice deadline week 2](https://forms.office.com/e/xw8hTUTctq)
+⌨️ [Feed'n practice deadline week 2](/labs/lab-2.html)
 
 <br><br>
 
