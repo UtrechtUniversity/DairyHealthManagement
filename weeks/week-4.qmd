@@ -1,32 +1,59 @@
 ---
-title: "Week 1"
-subtitle: "Welcome to STA 210"
+title: "Infectious disease management"
+subtitle: "Week 4"
 editor: visual
 ---
 
-::: callout-important
-Classes are virtual this week. Find Zoom links [here](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/d5eef508-07a4-4c6d-b7bd-4614a9631562 "Sakai - Zoom meetings").
-:::
+## Introduction
+
+Infectious disease management is a critical component of dairy cow health and welfare, directly impacting milk production, profitability, and overall farm sustainability. Dairy farmers face the constant challenge of preventing, detecting, and controlling infectious diseases within their herds to minimize economic losses and safeguard animal welfare. Effective infectious disease management strategies encompass various preventive measures, including biosecurity protocols, vaccination programs, proper sanitation practices, and regular health monitoring. Biosecurity protocols play a pivotal role in preventing the introduction and spread of infectious diseases on dairy farms. This includes controlling access to the farm, implementing quarantine procedures for new animals, and maintaining strict hygiene standards to reduce the risk of pathogen transmission between animals and farm personnel. Vaccination programs are essential tools in protecting dairy cows from common infectious diseases such as mastitis, bovine respiratory disease, and contagious diseases like infectious bovine rhinotracheitis (IBR) and bovine viral diarrhea (BVD). Vaccination protocols should be tailored to the specific disease risks present on the farm and administered according to recommended schedules to ensure optimal immunity.
+
+Overall, effective infectious disease management in dairy cows requires a multifaceted approach that integrates biosecurity, vaccination, sanitation, and proactive health monitoring strategies. By prioritizing disease prevention and early intervention, dairy farmers can minimize the impact of infectious diseases on cow health and productivity, ensuring the long-term sustainability of their operations.
+
+## Learning goals
+
+tbd
+
+## Topics covered
+
+-   What endemic disease can I encounter and how do I solve them?
+    1.  Knowledge of pathogens - what are the main ones
+    2.  How can I assess animal health status?
+    3.  What diagnostic options
+    4.  Prevention
+
+# Schedule
+
+|             | Monday  | Tuesday  | Wednesday | Thursday |    Friday    |
+|-------------|:-------:|:--------:|:---------:|:--------:|:------------:|
+| 9:00-9:45   | KC (WC) |          |           |          |   PP (WC)    |
+| 10:00-10:45 |         |          |           |          |   PP (WC)    |
+| 11:00-11:45 |   HC    |          |           |          |   PP (WC)    |
+| 12:00-12:45 |   HC    |          |           |          |   PP (WC)    |
+| 13:15-14:00 |   MTE   | FNP (WC) |    MTE    |          |              |
+| 14:15-15:00 |   MTE   | FNP (WC) |    MTE    |          |              |
+| 15:15-16:00 |         | FNP (WC) |           |          |              |
+| 16:15-17:00 |         | FNP (WC) |           |          | FNP DEADLINE |
+
+## Knowledge challenge
+
+Finish the [knowledge challenge for week 4](https://forms.office.com/e/ves0JSAfZJ) before the start of the first lecture.
 
 ## Prepare
 
-📖 Read the [syllabus](/course-syllabus.html)
-
-📖 Read the [support](/course-support.html) resources
-
 ## Participate
-
-🖥️ [Lab 0 -](/_slides/lab-0.html)[Meet](/slides/lab-0.html)[+ greet](/_slides/lab-0.html)
-
-🖥️ [Lecture 1 - Welcome to STA 210](/slides/lec-1.html)
 
 ## Practice
 
-📋 [AE 0 - Movies](/ae/ae-0-movies.html)
+📋 [Feed'n practice - TBD](/ae/ae-0-movies.html)
 
 ## Perform
 
-⌨️ [Lab 0 - Meet + greet](/labs/lab-0.html)
+✅ [Knowledge challenge week 4](https://forms.office.com/e/ves0JSAfZJ)
+
+📂 Present your herd's transition management strategy to your peers
+
+⌨️ [Feed'n practice deadline week 4](/labs/lab-2.html)
 
 <br><br>
 

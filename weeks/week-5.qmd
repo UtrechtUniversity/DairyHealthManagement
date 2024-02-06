@@ -1,33 +1,79 @@
 ---
-title: "Week 1"
-subtitle: "Welcome to STA 210"
+title: "Udder & hoof health management"
+subtitle: "Week 5"
 editor: visual
 ---
 
-::: callout-important
-Classes are virtual this week.
-Find Zoom links [here](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/d5eef508-07a4-4c6d-b7bd-4614a9631562 "Sakai - Zoom meetings").
-:::
+## Introduction
+
+### Claw health
+
+Maintaining optimal claw health is crucial for dairy cow welfare and productivity, as it directly impacts their mobility and overall well-being. Preventing lameness, a common issue among dairy cows, requires proactive claw management strategies. Regular hoof trimming, clean housing surfaces, and foot hygiene protocols help prevent claw injuries and infections. Proper nutrition, including balanced mineral intake, supports strong hoof integrity and growth. Early detection of claw abnormalities and collaboration with hoof care professionals enable prompt intervention to mitigate lameness risks. Prioritizing claw health enhances dairy cow welfare, productivity, and farm sustainability..
+
+### Udder health
+
+Mastitis, an inflammation of the udder tissue, is a significant concern in dairy farming, impacting both cow health and milk quality. Preventing mastitis requires diligent management practices. Strategies include maintaining proper hygiene during milking, ensuring clean and dry bedding, and implementing regular udder health checks. Effective milking machine maintenance and proper teat disinfection protocols are crucial for preventing bacterial contamination. Early detection through somatic cell count monitoring and prompt treatment of infected cows are essential for minimizing the spread of mastitis within the herd. By prioritizing mastitis prevention and early intervention, dairy farmers can safeguard cow health and milk production quality, ensuring the long-term sustainability of their operations.
+
+## Learning goals
+
+tbd
+
+## Topics covered
+
+### Udder health
+
+-   Which mgmt aspects have an influence on udder health (treatment, goals, milking)
+
+    Be able to assess the udder health status of a company
+
+-   What problems can I encounter and how do I solve these primary problems?
+
+    -   Diagnostic
+    -   Curative
+    -   Preventive
+
+### Hoof health
+
+-   Which mgmt aspects have an influence on hoof health (7 step plan)
+    -   Being able to assess the hoof health status of a farm (digiklauw, LS)
+    -   What problems can I encounter and how do I solve them?
+    -   Infectious vs non-infectious (a bit more focus)
+    -   Diagnostic
+    -   Curative
+    -   Preventive
+
+# Schedule
+
+|             | Monday  | Tuesday  | Wednesday | Thursday |    Friday    |
+|-------------|:-------:|:--------:|:---------:|:--------:|:------------:|
+| 9:00-9:45   | KC (WC) |          |           |          |   PP (WC)    |
+| 10:00-10:45 |         |          |           |          |   PP (WC)    |
+| 11:00-11:45 |   HC    |          |           |          |   PP (WC)    |
+| 12:00-12:45 |   HC    |          |           |          |   PP (WC)    |
+| 13:15-14:00 |   MTE   | FNP (WC) |    MTE    |          |              |
+| 14:15-15:00 |   MTE   | FNP (WC) |    MTE    |          |              |
+| 15:15-16:00 |         | FNP (WC) |           |          |              |
+| 16:15-17:00 |         | FNP (WC) |           |          | FNP DEADLINE |
+
+## Knowledge challenge
+
+Finish the [knowledge challenge for week 5](https://forms.office.com/e/1J8zYDfkJb) before the start of the first lecture.
 
 ## Prepare
 
-📖 Read the [syllabus](/course-syllabus.html)
-
-📖 Read the [support](/course-support.html) resources
-
 ## Participate
-
-🖥️ [Lab 0 -](/_slides/lab-0.html)[Meet](/slides/lab-0.html)[+ greet](/_slides/lab-0.html)
-
-🖥️ [Lecture 1 - Welcome to STA 210](/slides/lec-1.html)
 
 ## Practice
 
-📋 [AE 0 - Movies](/ae/ae-0-movies.html)
+📋 [Feed'n practice - TBD](/ae/ae-0-movies.html)
 
 ## Perform
 
-⌨️ [Lab 0 - Meet + greet](/labs/lab-0.html)
+✅ [Knowledge challenge week 5](https://forms.office.com/e/1J8zYDfkJb)
+
+📂 Present your herd's transition management strategy to your peers
+
+⌨️ [Feed'n practice deadline week 5](/labs/lab-2.html)
 
 <br><br>
 

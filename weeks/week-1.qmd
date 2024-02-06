@@ -1,32 +1,56 @@
 ---
-title: "Week 1"
-subtitle: "Welcome to STA 210"
+title: "Youngstock management"
+subtitle: "Week 1"
 editor: visual
 ---
 
-::: callout-important
-Classes are virtual this week. Find Zoom links [here](https://sakai.duke.edu/portal/site/779c3ebe-3b88-4bcc-bd01-1813e8396a23/page/d5eef508-07a4-4c6d-b7bd-4614a9631562 "Sakai - Zoom meetings").
-:::
+# Introduction
+
+Youngstock management is a crucial aspect of dairy farming that focuses on the care and development of calves and heifers from birth to the point of entering the milking herd. Proper youngstock management is fundamental for the future success and productivity of a dairy operation. During this critical phase, the emphasis is on ensuring optimal growth, health, and welfare of the young animals. From providing adequate nutrition and implementing sound health protocols to creating appropriate housing environments, youngstock management sets the foundation for a productive and sustainable dairy herd. Effective management during this developmental stage not only influences the overall well-being of the animals but also plays a significant role in maximizing the potential for future milk production. In this dynamic field, dairy farmers and managers must employ a holistic approach that combines scientific knowledge, technological advancements, and practical experience to raise healthy, productive youngstock that will contribute to the long-term success of the dairy enterprise.
+
+## Learning goals
+
+1.  The student acquires insight into the youngstock rearing (e.g. how can you organize the feeding, transmission of disease, hygiene).
+2.  The student has insight into the management processes (incl. economics) on dairy farms that relate to youngstock rearing and knows the effects of this on animal health, animal welfare and products and product quality.
+3.  The student acquires insight into the data in the field of animal health, animal welfare and products and product quality that are available on a farm with regard to youngstock rearing and knows how these are recorded.
+4.  The student acquires knowledge and understanding of processes on the farm and practices clinical inspection of all aspects of youngstock rearing.
+
+## Topics covered
+
+-   ...
+
+# Schedule
+
+|             | Monday |   Tuesday    | Wednesday | Thursday |    Friday    |
+|-------------|:------:|:------------:|:---------:|:--------:|:------------:|
+| 9:00-9:45   |        |   Welcome    |  MTE 1.2  |          | PP 1.6 (WC)  |
+| 10:00-10:45 |        |  KC 1 (WC)   |  MTE 1.2  |          | PP 1.6 (WC)  |
+| 11:00-11:45 |        |    HC 1.1    |           |          | PP 1.6 (WC)  |
+| 12:00-12:45 |        |    HC 1.1    |           |          | PP 1.6 (WC)  |
+| 13:15-14:00 |        | FNP 1.3 (WC) |  MTE 1.5  |          |              |
+| 14:15-15:00 |        | FNP 1.3 (WC) |  MTE 1.5  |          |              |
+| 15:15-16:00 |        | FNP 1.3 (WC) |           |          |              |
+| 16:15-17:00 |        | FNP 1.3 (WC) |           |          | FNP DEADLINE |
+
+## Knowledge challenge
+
+Finish the [knowledge challenge for week 1](https://forms.office.com/e/PpVW2HdWKx) before the start of the first lecture.
 
 ## Prepare
 
-📖 Read the [syllabus](/course-syllabus.html)
-
-📖 Read the [support](/course-support.html) resources
-
 ## Participate
-
-🖥️ [Lab 0 -](/_slides/lab-0.html)[Meet](/slides/lab-0.html)[+ greet](/_slides/lab-0.html)
-
-🖥️ [Lecture 1 - Welcome to STA 210](/slides/lec-1.html)
 
 ## Practice
 
-📋 [AE 0 - Movies](/ae/ae-0-movies.html)
+📋 [Feed'n practice - Feeding the young calve](/ae/ae-0-movies.html)
 
 ## Perform
 
-⌨️ [Lab 0 - Meet + greet](/labs/lab-0.html)
+✅ [Knowledge challenge week 1](https://forms.office.com/e/PpVW2HdWKx)
+
+📂 Present your herd's transition management strategy to your peers
+
+⌨️ [Feed'n practice deadline week 1](/labs/lab-2.html)
 
 <br><br>
 
