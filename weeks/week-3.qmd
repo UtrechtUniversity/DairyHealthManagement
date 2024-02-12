@@ -6,28 +6,40 @@ editor: visual
 
 # Introduction
 
-Dairy cow reproduction management involves ...
+During this week students will focus on reproductive management on dairy farms as the basis for an economically and efficient milk production both on cow and herd level. After a general introduction to adopt and repeat reproductive knowledge special attention will be the Reproductive Management background and policy on dairy farms including data analysis and interpretation for decision making advices and hence tailored made treatment protocols for both individual cow that experience fertility problems and/or fertility related diseases as well as on herd level following the Dutch guidelines for intervention protocols, learning the underlying reasoning and background of the treatments including success rates. Keywords like sustainability, circularity, animal health and welfare but also the role of genomic selection on breeding programs will be interactively discussed during the course lectures in view of discussion on the global environment and protection related to future dairy farming.
 
 ## Learning goals
 
-1.  ...
+1.  The student gain knowledge on the primary processes of Reproduction Management (clinical diagnostics: cyclicity, anestrus, pregnancy diagnostics (including ultrasonography) on dairy farms including data analysis (calving interval, insemination number, interval calving-first heat and conception etc.) interpretation and tailored (economically and sensor technology based) decision making advices.
 
-## Topics covered
+2.  The student gains knowledge on the interaction reproduction and peri-partum metabolic stress (negative energy balance) during the transition period including risk factors, resumption ovarian cyclicity, retention secundinarum and (sub-)clinical(endo-)metritis.
 
--   ...
+3.  The student learns ins and outs of the Dutch Guidelines for Reproduction Management on dairy farms, including the (patho-)physiological background and reasoning of reproductive hormonal interventions both individual and herd level.
+
+4.  The student gains knowledge on reproductive technologies and genomic selection to improve genetics on dairy farms, including breeding policy and sperm selection.
+
+5.  The student learns and trains obstetrical flow charts hence decision making policies and procedures (e.g. clinical diagnostics, repositions, foetotomie) including surgical interventions (e.g. sectio caesarian, castration and OVX) and emergency practicals (e.g. bleedings, injuries, ruptures, prolapsus)
+
+## Course team
+
+|                      Picture                       | Name                                                         | About                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|:--------------:|----------------|-----------------------------------------|
+|          ![](/images/team/PeterVos.jpeg)           | [Peter Vos](https://www.uu.nl/medewerkers/PLAMVos)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|  ![](/images/team/HildeAardema.jpeg){width="100"}  | [Hilde Aardema](https://www.uu.nl/medewerkers/HAardema)      | Hilde Aardema is a veterinarian, reproduction specialist (ECAR diplomate) and researcher. Since 2020 she is heading the reproduction laboratory of Farm Animal Health. With the reproduction team of enthusiastic researchers, technicians and students she tries to unravel the mysteries of early life. Her research focus is how to maintain a healthy condition for both mother and offspring.                                                                                                    |
+| ![](/images/team/BelenRabaligno.jpeg){width="100"} | [Belen Rabaglino](https://www.uu.nl/medewerkers/MBRabaglino) | I am a veterinary scientist involved in Animal Reproduction. My research has focused on applying transcriptomics and epigenomics to understand endometrial biology and embryonic and fetal development in ruminants. My philosophy for analysing and interpreting this data type is to use traditional and innovative approaches, such as predictive models based on machine learning algorithms, and adapt these methods to generate meaningful results in the biological context of the experiment. |
 
 # Schedule
 
-|             |   Monday    |   Tuesday    | Wednesday  | Thursday |    Friday    |
-|-------------|:-----------:|:------------:|:----------:|:--------:|:------------:|
-| 9:00-9:45   | KC 3.0 (WC) |              |            |          | PP 3.6 (WC)  |
-| 10:00-10:45 |             |              |            |          | PP 3.6 (WC)  |
-| 11:00-11:45 |   IHC 3.1   |              |  IHC 3.4   |          | PP 3.6 (WC)  |
-| 12:00-12:45 |   IHC 3.1   |              |  IHC 3.4   |          | PP 3.6 (WC)  |
-| 13:15-14:00 |   MTE 3.2   | FNP 3.3 (WC) |            |          |              |
-| 14:15-15:00 |   MTE 3.2   | FNP 3.3 (WC) | WETLAB 3.5 |          |              |
-| 15:15-16:00 |             | FNP 3.3 (WC) | WETLAB 3.5 |          |              |
-| 16:15-17:00 |             | FNP 3.3 (WC) | WETLAB 3.5 |          | FNP DEADLINE |
+|             | Monday  | Tuesday  |  Wednesday  |  Thursday   |    Friday    |
+|-------------|:-------:|:--------:|:-----------:|:-----------:|:------------:|
+| 9:00-9:45   | KC (WC) |          |             |             |              |
+| 10:00-10:45 |   IC    |          |             |             |              |
+| 11:00-11:45 |   IC    |          |     IC      | WETLAB (WC) |   PP (WC)    |
+| 12:00-12:45 |         |          |     IC      | WETLAB (WC) |   PP (WC)    |
+| 13:15-14:00 |   MTE   | FNP (WC) | WETLAB (WC) |             |   PP (WC)    |
+| 14:15-15:00 |   MTE   | FNP (WC) | WETLAB (WC) |             |   PP (WC)    |
+| 15:15-16:00 |         | FNP (WC) |             |             |              |
+| 16:15-17:00 |   IC    | FNP (WC) |             |             | FNP DEADLINE |
 
 ## Prepare
 
