@@ -1,0 +1,40 @@
+---
+title: "Transition management IHC 01"
+subtitle: "TR-IHC-01"
+footer:  "[https://github.com/UtrechtUniversity/DairyHealthManagement](https://github.com/UtrechtUniversity/DairyHealthManagement)"
+logo: "images/logo.png"
+editor: visual
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+execute:
+  freeze: auto
+---
+
+## **Timeline**
+
+-   Introduction to the assignment by the teacher (\~ 5 minutes)
+
+-   Work on the assignment in groups of equal number of students (\~ 40 minutes)
+
+-   Teacher will re-join the group to discuss ( \~ 45 minutes)
+
+## Goal of this lab
+
+-   To get the entire class to understand how physiological changes occur over time during transition and how the relate to metabolic monitoring programs.
+
+-   To understand and be able to explain the pro's and con's of the different monitoring programs.
+
+## **Assignment group 1**
+
+-   Make a graphical representation on the board to illustrate the timeline of physiological changes (and challenges) a dairy cow faces during the transition period. Include phenotypes of interest such as milk production, dry matter intake, etc.
+
+## **Assignment group 2**
+
+-   Reflecting on the graphical representation from group 1, illustrate potential metabolic monitoring programs which could be installed on a farm when no economic restriction would be present. Think across veterinary boarders as other technologies might be trying to reach similar goals. Make a small SWOT analysis of each program
+
+    *Caveat - don't wait for group 1 to finish their timeline*
+
+## 
