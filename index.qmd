@@ -8,16 +8,16 @@ This page contains an outline of the topics, content, and assignments for the co
 ::: column-screen-inset-right
 <table>
 <colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
 <col style="width: 14%" />
-<col style="width: 20%" />
-<col style="width: 27%" />
-<col style="width: 10%" />
-<col style="width: 11%" />
-<col style="width: 9%" />
-<col style="width: 8%" />
-<col style="width: 11%" />
-<col style="width: 6%" />
-<col style="width: 11%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -147,7 +147,7 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"><p><a href="/weeks/week-2.html">2 (27-31/5)</a></p></td>
 <td style="text-align: left;"><p>Mon, 9:00-9:45</p></td>
 <td><p>Knowledge challenge</p></td>
-<td style="text-align: center;"><p>WC</p></td>
+<td style="text-align: center;"><p>TR-KC</p></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -159,9 +159,9 @@ This page contains an outline of the topics, content, and assignments for the co
 <td style="text-align: center;"></td>
 <td style="text-align: left;"><p>Mon, 11:00-12:45</p></td>
 <td><p>Transition MGMT</p></td>
-<td style="text-align: center;"><p>HC</p></td>
+<td style="text-align: center;"><p>TR-IHC-01</p></td>
 <td style="text-align: center;"><p>📖</p></td>
-<td style="text-align: center;"><p><a href="/slides/lab-0.html" title="Lab slides">🖥️</a></p></td>
+<td style="text-align: center;"><p><a href="/classes/TR-IHC-01.html" title="Class slides">🖥️</a></p></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -560,5 +560,5 @@ knitr::knit_exit()
 ```
 
 |      |      |       | Prepare | Slides | AE  |                                                    Labs                                                    | HW  | Exam | Project |
-|-----|-----|-----|:---:|:---:|:---:|:---------------------------:|:---:|:---:|:---:|
+|-------|-------|-------|:-----:|:-----:|:-----:|:-------------:|:-----:|:-----:|:-----:|
 | Week | Date | Topic |   📖    |   🖥️   | 📋  | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️  |  ✅  |   📂    |

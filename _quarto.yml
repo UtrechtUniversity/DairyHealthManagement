@@ -5,9 +5,9 @@ website:
   page-navigation: true
   title: "DHM"
   description: "Homepage for Dairy Health Management"
-  site-url: "https://bovi-analytics.github.io/DairyHealthManagment/"
+  site-url: "https://utrechtuniversity.github.io/DairyHealthManagment/"
 
-  repo-url: https://github.com/Bovi-analytics/DairyHealthManagment
+  repo-url: https://github.com/UtrechtUniversity/DairyHealthManagment
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -28,7 +28,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/Bovi-analytics/
+        href: https://github.com/UtrechtUniversity/
         text: "GitHub organization"
 
     style: "docked"
@@ -59,20 +59,16 @@ website:
             text: Tips + resources
       - section: "Weekly materials"
         contents:
-          - href: weeks/week-1.qmd
+          - href: weeks/week-reproduction-mgmt.qmd
             text: "Week 1"
-          - href: weeks/week-2.qmd
+          - href: weeks/week-transition-mgmt.qmd
             text: "Week 2"
-          - href: weeks/week-3.qmd
+          - href: weeks/week-youngstock-mgmt.qmd
             text: "Week 3"
-          - href: weeks/week-4.qmd
+          - href: weeks/week-infectious-disease-mgmt.qmd
             text: "Week 4"
-          - href: weeks/week-5.qmd
+          - href: weeks/week-udder-health-lameness-mgmt.qmd
             text: "Week 5"
-      - section: "Supplemental notes"
-        contents:
-          - href: supplemental/log-transformations.qmd
-            text: Log transformations
 
 
 format:

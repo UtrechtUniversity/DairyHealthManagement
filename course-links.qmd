@@ -3,7 +3,7 @@ title: "Useful links"
 ---
 
 |                                       |                                                                                                                                                                                  |
-|-----------------|-------------------------------------------------------|
+|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Handboek melkveehouderij              | 🔗 on [Wageningen University & Research](https://www.wur.nl/nl/show/handboek-melkveehouderij.htm)                                                                                |
 | Nutrient requirements of dairy cattle | 🔗 on [*The National Academics of Sciense,Engineering & Medicine*](https://nap.nationalacademies.org/catalog/25806/nutrient-requirements-of-dairy-cattle-eighth-revised-edition) |
 | MmmooOgle Feed                        | 🔗 on [Feed'n practice](https://feed.mmmooogle.com)                                                                                                                              |
