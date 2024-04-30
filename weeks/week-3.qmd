@@ -10,20 +10,32 @@ During this week students will focus on reproductive management on dairy farms a
 
 ## Learning goals
 
-1.  The student gain knowledge on the primary processes of Reproduction Management (clinical diagnostics: cyclicity, anestrus, pregnancy diagnostics (including ultrasonography) on dairy farms including data analysis (calving interval, insemination number, interval calving-first heat and conception etc.) interpretation and tailored (economically and sensor technology based) decision making advices.
+1.  The student reviews reproductive physiology and gains knowledge about the primary processes of Reproductive Management (clinical diagnostics: cyclicity, anestrus, pregnancy diagnostics (including ultrasonography) on dairy farms. 
 
-2.  The student gains knowledge on the interaction reproduction and peri-partum metabolic stress (negative energy balance) during the transition period including risk factors, resumption ovarian cyclicity, retention secundinarum and (sub-)clinical(endo-)metritis.
+<!-- -->
 
-3.  The student learns ins and outs of the Dutch Guidelines for Reproduction Management on dairy farms, including the (patho-)physiological background and reasoning of reproductive hormonal interventions both individual and herd level.
+2.  The student can describe the etiopathogenesis of peripartum (negative energy balance/metabolic stress related) diseases affecting the reproductive function such as retention secundinarum and (sub-)clinical(endo-)metritis. 
 
-4.  The student gains knowledge on reproductive technologies and genomic selection to improve genetics on dairy farms, including breeding policy and sperm selection.
+<!-- -->
 
-5.  The student learns and trains obstetrical flow charts hence decision making policies and procedures (e.g. clinical diagnostics, repositions, foetotomie) including surgical interventions (e.g. sectio caesarian, castration and OVX) and emergency practicals (e.g. bleedings, injuries, ruptures, prolapsus)
+3.  The student learns about the interactions between the etiopathogenesis of peripartum metabolic stress and reproductive performance, such as delayed resumption of the ovarian cyclicity and anestrus. 
+
+<!-- -->
+
+4.  The student is able to analyze data from sensors and management programs to evaluate reproductive parameters of a dairy farm (calving interval, insemination number, interval calving-first heat and conception, etc.) to give tailored advice to the farmer. 
+
+<!-- -->
+
+5.  The student learns about the outline of the Dutch Guidelines for Reproductive Management of dairy farms, including the (patho-) physiological background and the fundaments of reproductive hormonal interventions both at the individual and herd level. 
+
+<!-- -->
+
+6.  The student can identify tools for improving the genetic merit of dairy cows, such as assisted reproductive technologies and genomic selection, to discern how and when these tools could be applied including breeding policy on farm. 
 
 ## Course team
 
 |                      Picture                       | Name                                                         | About                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|:--------------:|----------------|-----------------------------------------|
+|:--------------------------------------------------:|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |          ![](/images/team/PeterVos.jpeg)           | [Peter Vos](https://www.uu.nl/medewerkers/PLAMVos)           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |  ![](/images/team/HildeAardema.jpeg){width="100"}  | [Hilde Aardema](https://www.uu.nl/medewerkers/HAardema)      | Hilde Aardema is a veterinarian, reproduction specialist (ECAR diplomate) and researcher. Since 2020 she is heading the reproduction laboratory of Farm Animal Health. With the reproduction team of enthusiastic researchers, technicians and students she tries to unravel the mysteries of early life. Her research focus is how to maintain a healthy condition for both mother and offspring.                                                                                                    |
 | ![](/images/team/BelenRabaligno.jpeg){width="100"} | [Belen Rabaglino](https://www.uu.nl/medewerkers/MBRabaglino) | I am a veterinary scientist involved in Animal Reproduction. My research has focused on applying transcriptomics and epigenomics to understand endometrial biology and embryonic and fetal development in ruminants. My philosophy for analysing and interpreting this data type is to use traditional and innovative approaches, such as predictive models based on machine learning algorithms, and adapt these methods to generate meaningful results in the biological context of the experiment. |
