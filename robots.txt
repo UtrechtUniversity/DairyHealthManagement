@@ -1,1 +1,1 @@
-Sitemap: https://bovi-analytics.github.io/DairyHealthManagment/sitemap.xml
+Sitemap: https://utrechtuniversity.github.io/DairyHealthManagment/sitemap.xml
