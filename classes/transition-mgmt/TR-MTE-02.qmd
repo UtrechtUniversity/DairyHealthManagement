@@ -13,12 +13,43 @@ execute:
   freeze: auto
 ---
 
-## **Timeline**
+## **Timeline** 
 
--   ...
+-   Interactive lecture on nutrient requirements for energy and protein in transition cows (\~45 min)
+
+-   45 minute break
+
+-   Peer teaching on hypocalcaemia in dairy cows (\~ 45 min)
+
+    -   Group 1 - \> focus on detection & monitoring ( -10 min)
+
+    -   Group 2 -\> focus on treatment ( -10 min)
+
+    -   Group 3 -\> focus on prevention ( -10 min)
+
+    -   Group 4 -\> focus on novel insights ( -10 min)
+
+-   Summarize how to approach the FeedNPractice session in the afternoon (\~ 5 min)
 
 ## Goal of this class
 
--   ...
+-   Learn by interacting
+    -   Apply knowledge to design transition diets and manage nutrient intake in transition cows effectively.
+    -   Analyze the effects of nutrient intake on transition cow health and productivity.
+    -   Evaluate feeding strategies and research findings **to optimize nutrient management** during the transition period.
+-   Learn by peer teaching on hypocalcaemia
+
+# Requirements
+
+## Energy and protein
+
+```{=html}
+<iframe src="https://prezi.com/p/embed/Sai4brX3YIyT5nbqGGP6/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```
+## Mineral
+
+```{=html}
+<iframe src="https://prezi.com/p/embed/xFWsoCibqaQGFJLDFhNY/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```
 
 ## 

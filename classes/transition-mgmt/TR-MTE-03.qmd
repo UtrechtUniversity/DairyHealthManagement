@@ -13,16 +13,31 @@ execute:
   freeze: auto
 ---
 
-## **Timeline**
+## **Timeline** 
 
--   ...
+-   Introduction to the assignment (\~5 min)
+
+-   Prepare for peer teaching (\~40 min)
+
+-   Peer teaching on hyperketonemia in dairy cows (\~ 45 min)
+
+    -   Group 1 - \> focus on detection & monitoring ( -10 min)
+
+    -   Group 2 -\> focus on treatment ( -10 min)
+
+    -   Group 3 -\> focus on prevention ( -10 min)
+
+    -   Group 4 -\> focus on novel insights ( -10 min)
 
 ## Goal of this class
 
--   ...
+-   Learn by doing
+    -   how to apply knowledge on subclinical ketosis to diagnose and treat affected dairy cows effectively.
+    -   how to analyze risk factors and effects of subclinical ketosis on dairy cow health and productivity.
+    -   how to evaluate diagnostic tools and **non-nutritional management strategies** for subclinical ketosis.
 
-## **Discussion**
+## Hyperketonemia
 
--   ...
-
-Supplemental material
+```{=html}
+<iframe src="https://prezi.com/p/embed/mwFt4qgVqmyfRPzNRLVe/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```
