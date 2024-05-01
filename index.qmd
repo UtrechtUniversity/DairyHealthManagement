@@ -7,18 +7,6 @@ This page contains an outline of the topics, content, and assignments for the co
 
 ::: column-screen-inset-right
 <table>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 14%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;"><p>Week</p></th>
@@ -560,5 +548,5 @@ knitr::knit_exit()
 ```
 
 |      |      |       | Prepare | Slides | AE  |                                                    Labs                                                    | HW  | Exam | Project |
-|-------|-------|-------|:-----:|:-----:|:-----:|:-------------:|:-----:|:-----:|:-----:|
+|------|------|-------|:-------:|:------:|:---:|:----------------------------------------------------------------------------------------------------------:|:---:|:----:|:-------:|
 | Week | Date | Topic |   📖    |   🖥️   | 📋  | [💻](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221641094171786) | ✍️  |  ✅  |   📂    |

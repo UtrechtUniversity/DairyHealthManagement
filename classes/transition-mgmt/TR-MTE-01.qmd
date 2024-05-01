@@ -23,7 +23,7 @@ execute:
 
 ## Goal of this class
 
--   Encourage students to critically reflect on the ethical, emotional, and practical considerations surrounding cow-calf separation in dairy farming.
+-   Encourage students to critically reflect on the ethical, emotional, and practical considerations surrounding cow-calf separation in dairy farming, **focus on the COW perspective, not the CALF.**
 
 -   Explore the implications of cow-calf separation on both the welfare of the animals involved.
 

@@ -1,7 +1,7 @@
 ---
 title: "Transition management IHC 01"
 subtitle: "TR-IHC-01"
-footer:  "[https://github.com/UtrechtUniversity/DairyHealthManagement](https://github.com/UtrechtUniversity/DairyHealthManagement)"
+footer:  "[https://utrechtuniversity.github.io/DairyHealthManagement/](https://utrechtuniversity.github.io/DairyHealthManagement/)"
 logo: "images/logo.png"
 editor: visual
 format: 
@@ -37,4 +37,13 @@ execute:
 
     *Caveat - don't wait for group 1 to finish their timeline*
 
-## Supplemental
+## Supplemental 01
+
+```{=html}
+<iframe src="https://prezi.com/p/embed/7gQtib7vnib2Vqo2KDaj/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```
+## Supplemental 02
+
+```{=html}
+<iframe src="https://prezi.com/p/embed/KSNWf7pGz7UkF8M2w1V6/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```

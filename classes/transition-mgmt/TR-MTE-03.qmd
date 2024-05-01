@@ -1,0 +1,28 @@
+---
+title: "Transition management MTE 03"
+subtitle: "TR-MTE-03"
+footer:  "[https://github.com/UtrechtUniversity/DairyHealthManagement](https://github.com/UtrechtUniversity/DairyHealthManagement)"
+logo: "images/logo.png"
+editor: visual
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+execute:
+  freeze: auto
+---
+
+## **Timeline**
+
+-   ...
+
+## Goal of this class
+
+-   ...
+
+## **Discussion**
+
+-   ...
+
+Supplemental material

@@ -1,26 +1,17 @@
 project:
   type: website
-
 website:
   page-navigation: true
   title: "DHM"
   description: "Homepage for Dairy Health Management"
   site-url: "https://utrechtuniversity.github.io/DairyHealthManagment/"
-
   repo-url: https://github.com/UtrechtUniversity/DairyHealthManagment
   repo-actions: [edit, issue]
-
   open-graph: true
-
-  twitter-card:
-    creator: "@MielHostens"
-    image: "images/twitter-card.png"
-
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2023, Miel Hostens"
+    left: "&copy; Copyright 2024, Miel Hostens"
     background: "#FFCD00"
-
   sidebar:
     background: "#FFCD00"
     logo: "images/UtrechtUniversityLogo.png"
@@ -59,18 +50,16 @@ website:
             text: Tips + resources
       - section: "Weekly materials"
         contents:
-          - href: weeks/week-reproduction-mgmt.qmd
+          - href: weeks/reproduction-mgmt.qmd
             text: "Week 1"
-          - href: weeks/week-transition-mgmt.qmd
+          - href: weeks/transition-mgmt.qmd
             text: "Week 2"
-          - href: weeks/week-youngstock-mgmt.qmd
+          - href: weeks/youngstock-mgmt.qmd
             text: "Week 3"
-          - href: weeks/week-infectious-disease-mgmt.qmd
+          - href: weeks/infectious-disease-mgmt.qmd
             text: "Week 4"
-          - href: weeks/week-udder-health-lameness-mgmt.qmd
+          - href: weeks/udder-health-lameness-mgmt.qmd
             text: "Week 5"
-
-
 format:
   html:
     theme:
@@ -80,7 +69,5 @@ format:
     code-copy: true
     code-overflow: wrap
     toc: true
-
 freeze: auto
-
 editor: visual
