@@ -6,58 +6,68 @@ editor: visual
 
 # Introduction
 
-Dairy cow transition management involves a strategic approach to ensure smooth physiological and metabolic shifts from the pre-partum to the post-partum period. Focused on optimizing health and milk production, it encompasses dietary adjustments, stress reduction, and monitoring to prevent issues like metabolic disorders and reduced fertility. Balancing nutrition, minimizing environmental stress, and offering appropriate evidence based veterinary care aids in the successful transition from late pregnancy to early lactation, benefiting both cow welfare and farm profitability. Effective transition management enhances milk yield, reproductive efficiency, and overall animal welfare in the critical phase of a dairy cow's life cycle.
+The transition period is one of the most critical phases in a cow's life cycle. It encompassing the weeks before and after calving. Typically 3 weeks before until 3 weeks after, which is open for debate. This pivotal time prepares the cow's future lactation performance, health, and overall well-being.
+
+Transition management is a multifaceted approach that involves understanding and addressing the unique physiological, nutritional, and environmental challenges faced by dairy cows during this period. From managing metabolic disorders to optimizing feed strategies and ensuring proper housing conditions, effective transition management is key to maximizing milk production, minimizing health issues, and promoting animal welfare.
+
+Throughout this week, we will dive into transition management for dairy cows, have you explore the latest research findings, best practices, and practical strategies employed by dairy veterinarians. At the end of the week, you will present the transition management from your assigned herd to your peers.
 
 ## Learning goals
 
-1.  The student acquires insight into the management of cows during the transition to lactation (e.g. (patho)-physiology, feeding strategies, housing).
+1.  The student is able to apply knowledge of the physiological changes occurring during the transition period in dairy cows to develop effective management strategies for optimizing cow health and productivity.
 
-2.  The student has insight into the processes (including economics) on the farm that relate to transition management and knows the effects of this on animal health, animal welfare, products and product quality (in relation to the requirements of the customers).
+2.  The student utilizes principles of nutrition and feeding management to formulate balanced transition diets that meet the specific needs of dairy cows during the transition phase.
 
-3.  The student acquires data-driven insights in animal health, animal welfare and products and product quality available on transition management. The student knows how these are recorded, and what their meaning and coherence is.
+3.  The student can analyze common metabolic disorders associated with the transition period in dairy cows, and identify risk factors and potential interventions to mitigate their impact.
 
-4.  The student acquires knowledge and understanding in transition management linked to clinical inspection.
+4.  Evaluate the influence of environmental factors, such as housing conditions and management practices, on the transition success of dairy cows, and propose strategies for optimizing the transition environment.
 
-5.  The student is able to create an animal health transition monitoring and treatment plan.
+5.  The student evaluate the effectiveness of transition management practices using key performance indicators such as blood metabolites, milk production, and cow health outcomes.
 
-## Topics covered
+6.  Critically assess research findings and industry recommendations related to transition management, discerning between evidence-based practices and anecdotal claims to make informed management decisions.
 
--   ...
+7.  Design comprehensive transition management plans tailored to the specific needs and resources of individual dairy farms, incorporating strategies for monitoring, adjusting, and optimizing transition protocols.
 
 # Schedule
 
-|             |  Monday   |   Tuesday    | Wednesday | Thursday |    Friday    |
-|-------------|:---------:|:------------:|:---------:|:--------:|:------------:|
-| 9:00-9:45   | KC 2 (WC) |              |           |          | PP 2.6 (WC)  |
-| 10:00-10:45 |           |              |           |          | PP 2.6 (WC)  |
-| 11:00-11:45 |  HC 2.1   |              |  IHC 2.4  |          | PP 2.6 (WC)  |
-| 12:00-12:45 |  HC 2.1   |              |  IHC 2.4  |          | PP 2.6 (WC)  |
-| 13:15-14:00 |  MTE 2.2  | FNP 2.3 (WC) |  MTE 2.5  |          |              |
-| 14:15-15:00 |  MTE 2.2  | FNP 2.3 (WC) |  MTE 2.5  |          |              |
-| 15:15-16:00 |           | FNP 2.3 (WC) |           |          |              |
-| 16:15-17:00 |           | FNP 2.3 (WC) |           |          | FNP DEADLINE |
+|             |                        Monday                        |  Tuesday  | Wednesday | Thursday |     Friday      |
+|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| 9:00-9:45   |        [TR-KC](https://remindo.uu.nl//login)         | TR-MTE-01 |           | TR-PR01  |   TR-PRES-01    |
+| 10:00-10:45 |                                                      | TR-MTE-02 |           | TR-PR01  |   TR-PRES-01    |
+| 11:00-11:45 | [TR-IHC-01](/classes/transition-mgmt/tr-ihc-01.html) |           |           | TR-PR02  |   TR-PRES-02    |
+| 12:00-12:45 |                      TR-IHC-01                       |           |           | TR-PR02  |   TR-PRES-02    |
+| 13:15-14:00 |                       TR-WC-03                       | TR-FNP-WC | TR-MTE-03 |          |                 |
+| 14:15-15:00 |                       TR-WC-03                       | TR-FNP-WC | TR-MTE-04 |          |                 |
+| 15:15-16:00 |                                                      | TR-FNP-WC |           |          |                 |
+| 16:15-17:00 |                                                      | TR-FNP-WC |           |          | TR-FNP DEADLINE |
 
 ## Knowledge challenge
 
-Finish the [knowledge challenge for week 2](https://forms.office.com/e/PpVW2HdWKx) before the start of the first lecture.
+Finish the [knowledge challenge](https://remindo.uu.nl//login) before the start of the first lecture.
 
 ## Prepare
 
-📖 Read the [symposium review](https://doi.org/10.3168/jds.2019-17271) article on *Nutritional strategies to improve health, production and fertility.*
+📖 Read the [article](https://doi.org/10.3390/ani11020352) - *Monitoring and Improving the Metabolic Health of Dairy Cows during the Transition Period.*
 
-📖 Read the [review article](https://doi.org/10.1016/j.cvfa.2004.06.011) on *Behavioral needs of the transition cow and considerations for special needs facility design*.
+📖 Read the [award article](https://doi.org/10.3168/jds.2022-23194) - *What makes for a good life for transition dairy cows?*
 
-📖 Read the [award article](https://doi.org/10.3168/jds.2022-23194) on *What makes for a good life for transition dairy cows?*
+📖 Read the [symposium review](https://doi.org/10.3168/jds.2019-17271) - *Nutritional strategies to improve health, production and fertility.*
+
+📖 Read the [review article](https://doi.org/10.1016/j.cvfa.2004.06.011) - *Behavioral needs of the transition cow and considerations for special needs facility design*.
 
 ## Participate
 
-🖥️ IHC 2.1 - Transition management lecture
+🖥️ [TR-IHC-01](/classes/transition-mgmt/tr-ihc-01.html) - From animal physiology towards transition monitoring
 
-🖥️ MTE 2.2 - tbd
+🖥️ TR-WC-03 - Basic economics on dairy farms
 
-🖥️ IHC 2.4 - tbd
+🖥️ [TR-MTE-01](/classes/transition-mgmt/tr-mte-01.html) - What makes for a good life for transition dairy cows
 
-🖥️ IHC 2.4 - tbd
+🖥️ TR-MTE-02 - Nutritional transition management in dairy cows
+
+🖥️ TR-MTE-02 - Non-nutritional transition management in dairy cows
+
+🖥️ TR-PR01
 
 ## Practice
 
@@ -65,7 +75,7 @@ Finish the [knowledge challenge for week 2](https://forms.office.com/e/PpVW2HdWK
 
 ## Perform
 
-✅ [Knowledge challenge week 2](https://forms.office.com/e/xw8hTUTctq)
+✅ [Knowledge challenge](https://remindo.uu.nl//login)
 
 📂 Present your herd's transition management strategy to your peers
 
