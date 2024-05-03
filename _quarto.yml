@@ -4,8 +4,8 @@ website:
   page-navigation: true
   title: "DHM"
   description: "Homepage for Dairy Health Management"
-  site-url: "https://utrechtuniversity.github.io/DairyHealthManagment/"
-  repo-url: https://github.com/UtrechtUniversity/DairyHealthManagment
+  site-url: "https://utrechtuniversity.github.io/DairyHealthManagement/"
+  repo-url: https://github.com/UtrechtUniversity/DairyHealthManagement
   repo-actions: [edit, issue]
   open-graph: true
   page-footer:
