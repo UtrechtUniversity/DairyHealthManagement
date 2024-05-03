@@ -1,6 +1,6 @@
 ---
-title: "Transition management MTE 01"
-subtitle: "TR-MTE-01"
+title: "Transition management MTE 02"
+subtitle: "TR-MTE-02"
 footer:  "[https://github.com/UtrechtUniversity/DairyHealthManagement](https://github.com/UtrechtUniversity/DairyHealthManagement)"
 logo: "images/logo.png"
 editor: visual
@@ -13,22 +13,43 @@ execute:
   freeze: auto
 ---
 
-## **Timeline**
+## **Timeline** 
 
--   Introduction to the assignment by the teacher (\~ 5 minutes)
+-   Interactive lecture on nutrient requirements for energy and protein in transition cows (\~45 min)
 
--   Watch the podcast about [cow-calf seperation](https://www.youtube.com/watch?v=4mtLFCdYqw0) (\~ 30 minutes)
+-   45 minute break
 
--   Teacher will re-join the group to discuss ( \~ 10 minutes)
+-   Peer teaching on hypocalcaemia in dairy cows (\~ 45 min)
+
+    -   Group 1 - \> focus on detection & monitoring ( -10 min)
+
+    -   Group 2 -\> focus on treatment ( -10 min)
+
+    -   Group 3 -\> focus on prevention ( -10 min)
+
+    -   Group 4 -\> focus on novel insights ( -10 min)
+
+-   Summarize how to approach the FeedNPractice session in the afternoon (\~ 5 min)
 
 ## Goal of this class
 
--   Encourage students to critically reflect on the ethical, emotional, and practical considerations surrounding cow-calf separation in dairy farming, **focus on the COW perspective, not the CALF.**
+-   Learn by interacting
+    -   Apply knowledge to design transition diets and manage nutrient intake in transition cows effectively.
+    -   Analyze the effects of nutrient intake on transition cow health and productivity.
+    -   Evaluate feeding strategies and research findings **to optimize nutrient management** during the transition period.
+-   Learn by peer teaching on hypocalcaemia
 
--   Explore the implications of cow-calf separation on both the welfare of the animals involved.
+# Requirements
 
--   Foster empathy and understanding towards the perspectives of various stakeholders, including farmers, consumers, animal welfare advocates, and industry experts.
+## Energy and protein
 
-## **Discussion**
+```{=html}
+<iframe src="https://prezi.com/p/embed/Sai4brX3YIyT5nbqGGP6/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```
+## Mineral
 
--   The teacher will facilitate the discussion aimed at synthesizing the information presented in the podcast with students' own values, beliefs, and experiences to develop a nuanced understanding of the complex issues surrounding cow-calf separation.
+```{=html}
+<iframe src="https://prezi.com/p/embed/xFWsoCibqaQGFJLDFhNY/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+```
+
+## 

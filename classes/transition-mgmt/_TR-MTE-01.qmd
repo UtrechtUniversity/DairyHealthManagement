@@ -1,0 +1,34 @@
+---
+title: "Transition management MTE 01"
+subtitle: "TR-MTE-01"
+footer:  "[https://github.com/UtrechtUniversity/DairyHealthManagement](https://github.com/UtrechtUniversity/DairyHealthManagement)"
+logo: "images/logo.png"
+editor: visual
+format: 
+  revealjs: 
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+execute:
+  freeze: auto
+---
+
+## **Timeline**
+
+-   Introduction to the assignment by the teacher (\~ 5 minutes)
+
+-   Watch the podcast about [cow-calf seperation](https://www.youtube.com/watch?v=4mtLFCdYqw0) (\~ 30 minutes)
+
+-   Teacher will re-join the group to discuss ( \~ 10 minutes)
+
+## Goal of this class
+
+-   Encourage students to critically reflect on the ethical, emotional, and practical considerations surrounding cow-calf separation in dairy farming, **focus on the COW perspective, not the CALF.**
+
+-   Explore the implications of cow-calf separation on both the welfare of the animals involved.
+
+-   Foster empathy and understanding towards the perspectives of various stakeholders, including farmers, consumers, animal welfare advocates, and industry experts.
+
+## **Discussion**
+
+-   The teacher will facilitate the discussion aimed at synthesizing the information presented in the podcast with students' own values, beliefs, and experiences to develop a nuanced understanding of the complex issues surrounding cow-calf separation.

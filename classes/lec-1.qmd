@@ -15,11 +15,6 @@ execute:
   freeze: auto
 ---
 
-```{r}
-#| include: false
-library(countdown)
-```
-
 # Welcome
 
 ## Meet the teachers

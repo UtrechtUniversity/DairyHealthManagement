@@ -1,6 +1,6 @@
 ---
-title: "Transition management MTE 02"
-subtitle: "TR-MTE-02"
+title: "Transition management MTE 03"
+subtitle: "TR-MTE-03"
 footer:  "[https://github.com/UtrechtUniversity/DairyHealthManagement](https://github.com/UtrechtUniversity/DairyHealthManagement)"
 logo: "images/logo.png"
 editor: visual
@@ -15,11 +15,11 @@ execute:
 
 ## **Timeline** 
 
--   Interactive lecture on nutrient requirements for energy and protein in transition cows (\~45 min)
+-   Introduction to the assignment (\~5 min)
 
--   45 minute break
+-   Prepare for peer teaching (\~40 min)
 
--   Peer teaching on hypocalcaemia in dairy cows (\~ 45 min)
+-   Peer teaching on hyperketonemia in dairy cows (\~ 45 min)
 
     -   Group 1 - \> focus on detection & monitoring ( -10 min)
 
@@ -29,27 +29,15 @@ execute:
 
     -   Group 4 -\> focus on novel insights ( -10 min)
 
--   Summarize how to approach the FeedNPractice session in the afternoon (\~ 5 min)
-
 ## Goal of this class
 
--   Learn by interacting
-    -   Apply knowledge to design transition diets and manage nutrient intake in transition cows effectively.
-    -   Analyze the effects of nutrient intake on transition cow health and productivity.
-    -   Evaluate feeding strategies and research findings **to optimize nutrient management** during the transition period.
--   Learn by peer teaching on hypocalcaemia
+-   Learn by doing
+    -   how to apply knowledge on subclinical ketosis to diagnose and treat affected dairy cows effectively.
+    -   how to analyze risk factors and effects of subclinical ketosis on dairy cow health and productivity.
+    -   how to evaluate diagnostic tools and **non-nutritional management strategies** for subclinical ketosis.
 
-# Requirements
-
-## Energy and protein
+## Hyperketonemia
 
 ```{=html}
-<iframe src="https://prezi.com/p/embed/Sai4brX3YIyT5nbqGGP6/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
+<iframe src="https://prezi.com/p/embed/mwFt4qgVqmyfRPzNRLVe/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
 ```
-## Mineral
-
-```{=html}
-<iframe src="https://prezi.com/p/embed/xFWsoCibqaQGFJLDFhNY/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="600" width="1200"></iframe>
-```
-
-## 

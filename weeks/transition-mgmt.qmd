@@ -31,13 +31,13 @@ Throughout this week, we will dive into transition management for dairy cows, ha
 # Schedule
 
 |             |                       Monday                        |                       Tuesday                        |                      Wednesday                       | Thursday |     Friday      |
-|------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+|---------------|:----------:|:----------:|:----------:|:----------:|:----------:|
 | 9:00-9:45   |        [TR-KC](https://remindo.uu.nl//login)        | [TR-MTE-01](/classes/transition-mgmt/TR-MTE-01.html) |                                                      | TR-PR01  |   TR-PRES-01    |
-| 10:00-10:45 |                                                     | [TR-MTE-02](/classes/transition-mgmt/TR-MTE-02.html) |                                                      | TR-PR01  |   TR-PRES-01    |
+| 10:00-10:45 |                                                     |                      TR-MTE-01                       |                                                      | TR-PR01  |   TR-PRES-01    |
 | 11:00-11:45 | [TR-IHC-01](classes/transition-mgmt/TR-IHC-01.html) |                                                      |                                                      | TR-PR02  |   TR-PRES-02    |
 | 12:00-12:45 |                      TR-IHC-01                      |                                                      |                                                      | TR-PR02  |   TR-PRES-02    |
-| 13:15-14:00 |                      TR-WC-03                       |  [TR-FNP-WC](/classes/transition-mgmt/TR-FNP.html)   | [TR-MTE-03](/classes/transition-mgmt/TR-MTE-03.html) |          |                 |
-| 14:15-15:00 |                      TR-WC-03                       |                      TR-FNP-WC                       | [TR-MTE-04](/classes/transition-mgmt/TR-MTE-04.html) |          |                 |
+| 13:15-14:00 |                      TR-WC-03                       |  [TR-FNP-WC](/classes/transition-mgmt/TR-FNP.html)   | [TR-MTE-02](/classes/transition-mgmt/TR-MTE-02.html) |          |                 |
+| 14:15-15:00 |                      TR-WC-03                       |                      TR-FNP-WC                       |                      TR-MTE-02                       |          |                 |
 | 15:15-16:00 |                                                     |                      TR-FNP-WC                       |                                                      |          |                 |
 | 16:15-17:00 |                                                     |                      TR-FNP-WC                       |                                                      |          | TR-FNP DEADLINE |
 
