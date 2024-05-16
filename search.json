@@ -136,7 +136,7 @@
     "href": "weeks/transition-mgmt.html#participate",
     "title": "Transition management",
     "section": "Participate",
-    "text": "Participate\n🖥️ TR-IHC-01 - From animal physiology towards transition monitoring\n🖥️ TR-WC-03 - Basic economics on dairy farms\n🖥️ TR-MTE-01 - What makes for a good life for transition dairy cows\n🖥️ TR-MTE-02 - Nutritional transition management in dairy cows\n🖥️ TR-MTE-02 - Non-nutritional transition management in dairy cows\n🖥️ TR-PR01",
+    "text": "Participate\n🖥️ HC02-1 - From animal physiology towards transition monitoring\n🖥️ WC03 - Basic economics on dairy farms\n🖥️ MTE01-1 - What makes for a good life for transition dairy cows\n🖥️ MTE01-2 - Nutritional transition management in dairy cows\n🖥️ PR01 - Non-nutritional transition management in dairy cows",
     "crumbs": [
       "Weekly materials",
       "Week 2"
@@ -642,74 +642,88 @@
     ]
   },
   {
-    "objectID": "classes/transition-mgmt/TR-MTE-02.html#timeline",
-    "href": "classes/transition-mgmt/TR-MTE-02.html#timeline",
-    "title": "Transition management MTE 03",
-    "section": "Timeline",
-    "text": "Timeline\n\nIntroduction to the assignment (~5 min)\nPrepare for peer teaching (~40 min)\nPeer teaching on hyperketonemia in dairy cows (~ 45 min)\n\nGroup 1 - &gt; focus on detection & monitoring ( -10 min)\nGroup 2 -&gt; focus on treatment ( -10 min)\nGroup 3 -&gt; focus on prevention ( -10 min)\nGroup 4 -&gt; focus on novel insights ( -10 min)"
+    "objectID": "classes/transition-mgmt/TR-FNP.html",
+    "href": "classes/transition-mgmt/TR-FNP.html",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "",
+    "text": "This lab will go through many different approaches to nutritional transition cow management as an addition to principles explained by the experts. The main goal is to reinforce our understanding of dry and fresh cow nutrition. Particular focus will be on energy, protein and mineral requirements."
   },
   {
-    "objectID": "classes/transition-mgmt/TR-MTE-02.html#goal-of-this-class",
-    "href": "classes/transition-mgmt/TR-MTE-02.html#goal-of-this-class",
-    "title": "Transition management MTE 03",
+    "objectID": "classes/transition-mgmt/TR-FNP.html#introduction",
+    "href": "classes/transition-mgmt/TR-FNP.html#introduction",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "",
+    "text": "This lab will go through many different approaches to nutritional transition cow management as an addition to principles explained by the experts. The main goal is to reinforce our understanding of dry and fresh cow nutrition. Particular focus will be on energy, protein and mineral requirements."
+  },
+  {
+    "objectID": "classes/transition-mgmt/TR-FNP.html#learning-goals",
+    "href": "classes/transition-mgmt/TR-FNP.html#learning-goals",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the lab, you will…\n\nBe familiar energy, protein and mineral requirements for dry cows\nUnderstand different approaches to dry cow requirements\nBalance a dry and fresh cow diet using different forages\n…"
+  },
+  {
+    "objectID": "classes/transition-mgmt/TR-FNP.html#getting-started",
+    "href": "classes/transition-mgmt/TR-FNP.html#getting-started",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "Getting started",
+    "text": "Getting started\n\n\n\n\n\n\nImportant\n\n\n\nThe lab will use an online feed balancing software. If you are not familiar with the software, make sure to read the Getting Started section."
+  },
+  {
+    "objectID": "classes/transition-mgmt/TR-FNP.html#available-silages",
+    "href": "classes/transition-mgmt/TR-FNP.html#available-silages",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "Available silages",
+    "text": "Available silages\nBelow is an overview of different silages available on a farm you consult with.\n\nCorn silage\n\n\n\n\nGrass silage 1\n\n\n\n\n\nGrass silage 2"
+  },
+  {
+    "objectID": "classes/transition-mgmt/TR-FNP.html#exercises",
+    "href": "classes/transition-mgmt/TR-FNP.html#exercises",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "Exercises",
+    "text": "Exercises\nAdd each of the aforementioned forages to your feed library.\nDepending on the geo-spatial area where the dairy farm is situated, typical dry cow diets might differ. The farm manager and the nutritionist ask for your advice formulating different pre-fresh diets. You can add other forages/products (which he eventually has to buy).\nSummarize each of the diets according to their energy, protein and mineral content. You can use (but not limited, this example)\n\n\n\n\n\n\n\n\n\nNutrient\nDiet exercize 1\nDiet exercize 2\nDiet exercize 3\n\n\n\n\nEnergy\n\n\n\n\n\nProtein component 1\n\n\n\n\n\nProtein component 1\n\n\n\n\n\nCalcium (g/kg DM)\n\n\n\n\n\nP (g/kg DM)\n\n\n\n\n\n…\n\n\n\n\n\n\n\nExercise 1 -&gt; Grass silage based\nFormulate a pre-fresh diet in the case the dairy farmer asks you to use as much grass silage as possible as he wants to keep all corn silage for the lactating dairy cows.\nThe diet should be formulated to meet the requirements for energy, protein and minerals.\n\n\n\n\n\n\nNote\n\n\n\nThis diet might be typcial for grazing systems such as the North of the Netherlands, Ireland and New Zealand. When formulating such diets, scientific literature from these regions will be more suitable.\n\n\n\n\nExercise 2 -&gt; Corn silage based\nFormulate a pre-fresh diet in the case the dairy farmer asks you to use as little grass silage as possible as he wants to keep all grass silage for the lactating dairy cows. You can add other forages/products (which he eventually has to buy).\nThe diet should be formulated to meet the requirements for energy, protein and minerals.\n\n\n\n\n\n\nNote\n\n\n\nThis diet is more typcial for non-grazing systems such as France, North America. When formulating such diets, scientific literature from these regions will be more suitable.\n\n\n\n\nExercise 3 -&gt; Strategy cost evaluation\nCalculate the total cost per cow day (€/cow/day or $/cow/day) for the diets from exercise 1 and 2. Provide an overview of the relative contribution of each component in the ration.\n\n\n\n\n\n\nNote\n\n\n\nThe relative contribution of each component will help to evaluate the cost of each nutritional strategy, with a special focus on prevention of hypocalcaemia."
+  },
+  {
+    "objectID": "classes/transition-mgmt/TR-FNP.html#resources-for-additional-information",
+    "href": "classes/transition-mgmt/TR-FNP.html#resources-for-additional-information",
+    "title": "Lab 2 - Feed’n practice for transition management",
+    "section": "Resources for additional information",
+    "text": "Resources for additional information\n\nNutrient requirements of dairy cattle, 8th edition from The National Academics of Sciense,Engineering & Medicine\nNutrient requirements of dairy cows from The Merck Veterinary Manual\nChapter 6: Dairy cow nutrition from Handboek Melkveehouderij by Wageningen University & Research\nTransition Cow Nutrition and Feeding Management for Disease Prevention in Veterinary Clinics of North America: Food Animal Practice by Van Saun and Sniffen\nEnergy and Protein Nutrition Management of Transition Dairy Cows in Veterinary Clinics of North America: Food Animal Practice by Lean et al.\nSymposium review: Transition cow calcium homeostasis—Health effects of hypocalcemia and strategies for prevention in Journal of Dairy Science by Wilkens et al."
+  },
+  {
+    "objectID": "classes/transition-mgmt/MTE01-1.html#timeline",
+    "href": "classes/transition-mgmt/MTE01-1.html#timeline",
+    "title": "Transition management MTE 02",
+    "section": "Timeline",
+    "text": "Timeline\n\nInteractive lecture on nutrient requirements for energy and protein in transition cows (~45 min)\n45 minute break\nPeer teaching on hypocalcaemia in dairy cows (~ 45 min)\n\nGroup 1 - &gt; focus on detection & monitoring ( -10 min)\nGroup 2 -&gt; focus on treatment ( -10 min)\nGroup 3 -&gt; focus on prevention ( -10 min)\nGroup 4 -&gt; focus on novel insights ( -10 min)\n\nSummarize how to approach the FeedNPractice session in the afternoon (~ 5 min)"
+  },
+  {
+    "objectID": "classes/transition-mgmt/MTE01-1.html#goal-of-this-class",
+    "href": "classes/transition-mgmt/MTE01-1.html#goal-of-this-class",
+    "title": "Transition management MTE 02",
     "section": "Goal of this class",
-    "text": "Goal of this class\n\nLearn by doing\n\nhow to apply knowledge on subclinical ketosis to diagnose and treat affected dairy cows effectively.\nhow to analyze risk factors and effects of subclinical ketosis on dairy cow health and productivity.\nhow to evaluate diagnostic tools and non-nutritional management strategies for subclinical ketosis."
+    "text": "Goal of this class\n\nLearn by interacting\n\nApply knowledge to design transition diets and manage nutrient intake in transition cows effectively.\nAnalyze the effects of nutrient intake on transition cow health and productivity.\nEvaluate feeding strategies and research findings to optimize nutrient management during the transition period.\n\nLearn by peer teaching on hypocalcaemia"
   },
   {
-    "objectID": "classes/transition-mgmt/TR-MTE-02.html#hyperketonemia",
-    "href": "classes/transition-mgmt/TR-MTE-02.html#hyperketonemia",
-    "title": "Transition management MTE 03",
-    "section": "Hyperketonemia",
-    "text": "Hyperketonemia\n\n\n\n\n\nhttps://github.com/UtrechtUniversity/DairyHealthManagement"
+    "objectID": "classes/transition-mgmt/MTE01-1.html#energy-and-protein",
+    "href": "classes/transition-mgmt/MTE01-1.html#energy-and-protein",
+    "title": "Transition management MTE 02",
+    "section": "Energy and protein",
+    "text": "Energy and protein"
   },
   {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#timeline",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#timeline",
-    "title": "Transition management IHC 01",
-    "section": "Timeline",
-    "text": "Timeline\n\nIntroduction to the assignment by the teacher (~ 5 minutes)\nWork on the assignment in groups of equal number of students (~ 40 minutes)\nTeacher will re-join the group to discuss ( ~ 45 minutes)"
+    "objectID": "classes/transition-mgmt/MTE01-1.html#mineral",
+    "href": "classes/transition-mgmt/MTE01-1.html#mineral",
+    "title": "Transition management MTE 02",
+    "section": "Mineral",
+    "text": "Mineral"
   },
   {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#goal-of-this-lab",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#goal-of-this-lab",
-    "title": "Transition management IHC 01",
-    "section": "Goal of this lab",
-    "text": "Goal of this lab\n\nTo get the entire class to understand how physiological changes occur over time during transition and how the relate to metabolic monitoring programs.\nTo understand and be able to explain the pro’s and con’s of the different monitoring programs."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#assignment-group-1",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#assignment-group-1",
-    "title": "Transition management IHC 01",
-    "section": "Assignment group 1",
-    "text": "Assignment group 1\n\nMake a graphical representation on the board to illustrate the timeline of physiological changes (and challenges) a dairy cow faces during the transition period. Include phenotypes of interest such as milk production, dry matter intake, etc. Try to not go to much into detail for each of them but focus on the bigger picture, we will go into more detail the coming days."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#assignment-group-2",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#assignment-group-2",
-    "title": "Transition management IHC 01",
-    "section": "Assignment group 2",
-    "text": "Assignment group 2\n\nReflecting on the graphical representation from group 1, illustrate potential metabolic monitoring programs which could be installed on a farm when no economic restriction would be present. Think across veterinary boarders as other technologies might be trying to reach similar goals. Make a small SWOT analysis of each approach."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#assignment-group-3",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#assignment-group-3",
-    "title": "Transition management IHC 01",
-    "section": "Assignment group 3",
-    "text": "Assignment group 3\n\nReflecting on the graphical representation from group 1, identify the different metabolic disease that can occur on the timeline and indicate their incidende rate (and range). Create achievable and alarm rates for each of them.\nCaveat - don’t wait for group 1 to finish their timeline"
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#supplemental-01",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#supplemental-01",
-    "title": "Transition management IHC 01",
-    "section": "Supplemental 01",
-    "text": "Supplemental 01"
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-IHC-01.html#supplemental-02",
-    "href": "classes/transition-mgmt/TR-IHC-01.html#supplemental-02",
-    "title": "Transition management IHC 01",
-    "section": "Supplemental 02",
-    "text": "Supplemental 02\n\n\n\n\n\nhttps://utrechtuniversity.github.io/DairyHealthManagement/"
+    "objectID": "classes/transition-mgmt/MTE01-1.html#section",
+    "href": "classes/transition-mgmt/MTE01-1.html#section",
+    "title": "Transition management MTE 02",
+    "section": "",
+    "text": "https://github.com/UtrechtUniversity/DairyHealthManagement"
   },
   {
     "objectID": "classes/lec-1.html#meet-the-teachers",
@@ -908,88 +922,74 @@
     "text": "This week’s first tasks\n\nRead the syllabus\nGet a MmmooOgle Feed account if you don’t have one, you’ll need it for tomorrow’s first lab\nFill in the first knowledge challenge know\n\n\n\n\n\nhttps://github.com/Bovi-analytics/DairyHealthManagement"
   },
   {
-    "objectID": "classes/transition-mgmt/TR-FNP.html",
-    "href": "classes/transition-mgmt/TR-FNP.html",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "",
-    "text": "This lab will go through many different approaches to nutritional transition cow management as an addition to principles explained by the experts. The main goal is to reinforce our understanding of dry and fresh cow nutrition. Particular focus will be on energy, protein and mineral requirements."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-FNP.html#introduction",
-    "href": "classes/transition-mgmt/TR-FNP.html#introduction",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "",
-    "text": "This lab will go through many different approaches to nutritional transition cow management as an addition to principles explained by the experts. The main goal is to reinforce our understanding of dry and fresh cow nutrition. Particular focus will be on energy, protein and mineral requirements."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-FNP.html#learning-goals",
-    "href": "classes/transition-mgmt/TR-FNP.html#learning-goals",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "Learning goals",
-    "text": "Learning goals\nBy the end of the lab, you will…\n\nBe familiar energy, protein and mineral requirements for dry cows\nUnderstand different approaches to dry cow requirements\nBalance a dry and fresh cow diet using different forages\n…"
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-FNP.html#getting-started",
-    "href": "classes/transition-mgmt/TR-FNP.html#getting-started",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "Getting started",
-    "text": "Getting started\n\n\n\n\n\n\nImportant\n\n\n\nThe lab will use an online feed balancing software. If you are not familiar with the software, make sure to read the Getting Started section."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-FNP.html#available-silages",
-    "href": "classes/transition-mgmt/TR-FNP.html#available-silages",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "Available silages",
-    "text": "Available silages\nBelow is an overview of different silages available on a farm you consult with.\n\nCorn silage\n\n\n\n\nGrass silage 1\n\n\n\n\n\nGrass silage 2"
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-FNP.html#exercises",
-    "href": "classes/transition-mgmt/TR-FNP.html#exercises",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "Exercises",
-    "text": "Exercises\nAdd each of the aforementioned forages to your feed library.\nDepending on the geo-spatial area where the dairy farm is situated, typical dry cow diets might differ. The farm manager and the nutritionist ask for your advice formulating different pre-fresh diets. You can add other forages/products (which he eventually has to buy).\nSummarize each of the diets according to their energy, protein and mineral content. You can use (but not limited, this example)\n\n\n\n\n\n\n\n\n\nNutrient\nDiet exercize 1\nDiet exercize 2\nDiet exercize 3\n\n\n\n\nEnergy\n\n\n\n\n\nProtein component 1\n\n\n\n\n\nProtein component 1\n\n\n\n\n\nCalcium (g/kg DM)\n\n\n\n\n\nP (g/kg DM)\n\n\n\n\n\n…\n\n\n\n\n\n\n\nExercise 1 -&gt; Grass silage based\nFormulate a pre-fresh diet in the case the dairy farmer asks you to use as much grass silage as possible as he wants to keep all corn silage for the lactating dairy cows.\nThe diet should be formulated to meet the requirements for energy, protein and minerals.\n\n\n\n\n\n\nNote\n\n\n\nThis diet might be typcial for grazing systems such as the North of the Netherlands, Ireland and New Zealand. When formulating such diets, scientific literature from these regions will be more suitable.\n\n\n\n\nExercise 2 -&gt; Corn silage based\nFormulate a pre-fresh diet in the case the dairy farmer asks you to use as little grass silage as possible as he wants to keep all grass silage for the lactating dairy cows. You can add other forages/products (which he eventually has to buy).\nThe diet should be formulated to meet the requirements for energy, protein and minerals.\n\n\n\n\n\n\nNote\n\n\n\nThis diet is more typcial for non-grazing systems such as France, North America. When formulating such diets, scientific literature from these regions will be more suitable.\n\n\n\n\nExercise 3 -&gt; Strategy cost evaluation\nCalculate the total cost per cow day (€/cow/day or $/cow/day) for the diets from exercise 1 and 2. Provide an overview of the relative contribution of each component in the ration.\n\n\n\n\n\n\nNote\n\n\n\nThe relative contribution of each component will help to evaluate the cost of each nutritional strategy, with a special focus on prevention of hypocalcaemia."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-FNP.html#resources-for-additional-information",
-    "href": "classes/transition-mgmt/TR-FNP.html#resources-for-additional-information",
-    "title": "Lab 2 - Feed’n practice for transition management",
-    "section": "Resources for additional information",
-    "text": "Resources for additional information\n\nNutrient requirements of dairy cattle, 8th edition from The National Academics of Sciense,Engineering & Medicine\nNutrient requirements of dairy cows from The Merck Veterinary Manual\nChapter 6: Dairy cow nutrition from Handboek Melkveehouderij by Wageningen University & Research\nTransition Cow Nutrition and Feeding Management for Disease Prevention in Veterinary Clinics of North America: Food Animal Practice by Van Saun and Sniffen\nEnergy and Protein Nutrition Management of Transition Dairy Cows in Veterinary Clinics of North America: Food Animal Practice by Lean et al.\nSymposium review: Transition cow calcium homeostasis—Health effects of hypocalcemia and strategies for prevention in Journal of Dairy Science by Wilkens et al."
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-MTE-01.html#timeline",
-    "href": "classes/transition-mgmt/TR-MTE-01.html#timeline",
-    "title": "Transition management MTE 02",
+    "objectID": "classes/transition-mgmt/HC02-1.html#timeline",
+    "href": "classes/transition-mgmt/HC02-1.html#timeline",
+    "title": "Transition management IHC 01",
     "section": "Timeline",
-    "text": "Timeline\n\nInteractive lecture on nutrient requirements for energy and protein in transition cows (~45 min)\n45 minute break\nPeer teaching on hypocalcaemia in dairy cows (~ 45 min)\n\nGroup 1 - &gt; focus on detection & monitoring ( -10 min)\nGroup 2 -&gt; focus on treatment ( -10 min)\nGroup 3 -&gt; focus on prevention ( -10 min)\nGroup 4 -&gt; focus on novel insights ( -10 min)\n\nSummarize how to approach the FeedNPractice session in the afternoon (~ 5 min)"
+    "text": "Timeline\n\nIntroduction to the assignment by the teacher (~ 5 minutes)\nWork on the assignment in groups of equal number of students (~ 40 minutes)\nTeacher will re-join the group to discuss ( ~ 45 minutes)"
   },
   {
-    "objectID": "classes/transition-mgmt/TR-MTE-01.html#goal-of-this-class",
-    "href": "classes/transition-mgmt/TR-MTE-01.html#goal-of-this-class",
-    "title": "Transition management MTE 02",
+    "objectID": "classes/transition-mgmt/HC02-1.html#goal-of-this-lab",
+    "href": "classes/transition-mgmt/HC02-1.html#goal-of-this-lab",
+    "title": "Transition management IHC 01",
+    "section": "Goal of this lab",
+    "text": "Goal of this lab\n\nTo get the entire class to understand how physiological changes occur over time during transition and how they relate to metabolic monitoring programs.\nTo understand and be able to explain the pro’s and con’s of the different monitoring programs."
+  },
+  {
+    "objectID": "classes/transition-mgmt/HC02-1.html#assignment-group-1",
+    "href": "classes/transition-mgmt/HC02-1.html#assignment-group-1",
+    "title": "Transition management IHC 01",
+    "section": "Assignment group 1",
+    "text": "Assignment group 1\n\nMake a graphical representation on the board to illustrate the timeline of physiological changes (and challenges) a dairy cow faces during the transition period. Include phenotypes of interest such as milk production, dry matter intake, etc. Try to not go to much into detail for each of them but focus on the bigger picture, we will go into more detail the coming days."
+  },
+  {
+    "objectID": "classes/transition-mgmt/HC02-1.html#assignment-group-2",
+    "href": "classes/transition-mgmt/HC02-1.html#assignment-group-2",
+    "title": "Transition management IHC 01",
+    "section": "Assignment group 2",
+    "text": "Assignment group 2\n\nReflecting on the graphical representation from group 1, illustrate potential metabolic monitoring programs which could be installed on a farm when no economic restriction would be present. Think across veterinary boarders as other technologies might be trying to reach similar goals. Make a small SWOT analysis of each approach."
+  },
+  {
+    "objectID": "classes/transition-mgmt/HC02-1.html#assignment-group-3",
+    "href": "classes/transition-mgmt/HC02-1.html#assignment-group-3",
+    "title": "Transition management IHC 01",
+    "section": "Assignment group 3",
+    "text": "Assignment group 3\n\nReflecting on the graphical representation from group 1, identify the different metabolic disease that can occur on the timeline and indicate their incidende rate (and range). Create achievable and alarm rates for each of them.\nCaveat - don’t wait for group 1 to finish their timeline"
+  },
+  {
+    "objectID": "classes/transition-mgmt/HC02-1.html#supplemental-01",
+    "href": "classes/transition-mgmt/HC02-1.html#supplemental-01",
+    "title": "Transition management IHC 01",
+    "section": "Supplemental 01",
+    "text": "Supplemental 01"
+  },
+  {
+    "objectID": "classes/transition-mgmt/HC02-1.html#supplemental-02",
+    "href": "classes/transition-mgmt/HC02-1.html#supplemental-02",
+    "title": "Transition management IHC 01",
+    "section": "Supplemental 02",
+    "text": "Supplemental 02\n\n\n\n\n\nhttps://utrechtuniversity.github.io/DairyHealthManagement/"
+  },
+  {
+    "objectID": "classes/transition-mgmt/MTE01-2.html#timeline",
+    "href": "classes/transition-mgmt/MTE01-2.html#timeline",
+    "title": "Transition management MTE 03",
+    "section": "Timeline",
+    "text": "Timeline\n\nIntroduction to the assignment (~5 min)\nPrepare for peer teaching (~40 min)\nPeer teaching on hyperketonemia in dairy cows (~ 45 min)\n\nGroup 1 - &gt; focus on detection & monitoring ( -10 min)\nGroup 2 -&gt; focus on treatment ( -10 min)\nGroup 3 -&gt; focus on prevention ( -10 min)\nGroup 4 -&gt; focus on novel insights ( -10 min)"
+  },
+  {
+    "objectID": "classes/transition-mgmt/MTE01-2.html#goal-of-this-class",
+    "href": "classes/transition-mgmt/MTE01-2.html#goal-of-this-class",
+    "title": "Transition management MTE 03",
     "section": "Goal of this class",
-    "text": "Goal of this class\n\nLearn by interacting\n\nApply knowledge to design transition diets and manage nutrient intake in transition cows effectively.\nAnalyze the effects of nutrient intake on transition cow health and productivity.\nEvaluate feeding strategies and research findings to optimize nutrient management during the transition period.\n\nLearn by peer teaching on hypocalcaemia"
+    "text": "Goal of this class\n\nLearn by doing\n\nhow to apply knowledge on subclinical ketosis to diagnose and treat affected dairy cows effectively.\nhow to analyze risk factors and effects of subclinical ketosis on dairy cow health and productivity.\nhow to evaluate diagnostic tools and non-nutritional management strategies for subclinical ketosis."
   },
   {
-    "objectID": "classes/transition-mgmt/TR-MTE-01.html#energy-and-protein",
-    "href": "classes/transition-mgmt/TR-MTE-01.html#energy-and-protein",
-    "title": "Transition management MTE 02",
-    "section": "Energy and protein",
-    "text": "Energy and protein"
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-MTE-01.html#mineral",
-    "href": "classes/transition-mgmt/TR-MTE-01.html#mineral",
-    "title": "Transition management MTE 02",
-    "section": "Mineral",
-    "text": "Mineral"
-  },
-  {
-    "objectID": "classes/transition-mgmt/TR-MTE-01.html#section",
-    "href": "classes/transition-mgmt/TR-MTE-01.html#section",
-    "title": "Transition management MTE 02",
-    "section": "",
-    "text": "https://github.com/UtrechtUniversity/DairyHealthManagement"
+    "objectID": "classes/transition-mgmt/MTE01-2.html#hyperketonemia",
+    "href": "classes/transition-mgmt/MTE01-2.html#hyperketonemia",
+    "title": "Transition management MTE 03",
+    "section": "Hyperketonemia",
+    "text": "Hyperketonemia\n\n\n\n\n\nhttps://github.com/UtrechtUniversity/DairyHealthManagement"
   },
   {
     "objectID": "course-faq.html",
